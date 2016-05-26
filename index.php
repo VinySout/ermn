@@ -14,7 +14,7 @@ session_start();
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/index.css"/>  
         <!-- Javascript -->
-        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
         <script type="text/javascript" src="js/jquery.jDiaporama.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
       
@@ -118,20 +118,20 @@ session_start();
                     <div class="col-lg-2 main-titulo">
                         <div class="main-titulo-2">Institucional</div>
                             <ul class=" nav">
-                                <li class="  main-titulo-link"><a href="#">Missão</a></li>
-                                <li class=" main-titulo-link"><a href="#">História</a></li>
-                                <li class=" main-titulo-link"><a href="#">Heráldica</a></li>
-                                <li class=" main-titulo-link"><a href="#">Comandantes</a></li>
-                                <li class=" main-titulo-link"><a href="#">Organograma</a></li>
+                                <li class="  main-titulo-link"><a href="views/missao.php" >Missão</a></li>
+                                <li class=" main-titulo-link"><a href="views/historia.php">História</a></li>
+                                <li class=" main-titulo-link"><a href="views/">Heráldica</a></li>
+                                <li class=" main-titulo-link"><a href="views/#">Comandantes</a></li>
+                                <li class=" main-titulo-link"><a href="views/#">Organograma</a></li>
                             </ul>
                         <div class="main-titulo-2">Administração</div>
                             <ul class=" nav">
-                                <li class="main-titulo-link"><a href="#">STI</a></li>
-                                <li class="main-titulo-link"><a href="#">ComSoc</a></li>
-                                <li class="main-titulo-link"><a href="#">SeCom</a></li>
-                                <li class="main-titulo-link"><a href="#">Gestoria</a></li>
-                                <li class="main-titulo-link"><a href="#">Pessoal</a></li>
-                                <li class="main-titulo-link"><a href="#">Meio Ambiente</a></li>
+                                <li class="main-titulo-link"><a href="views/#">STI</a></li>
+                                <li class="main-titulo-link"><a href="views/#">ComSoc</a></li>
+                                <li class="main-titulo-link"><a href="views/#">SeCom</a></li>
+                                <li class="main-titulo-link"><a href="views/#">Gestoria</a></li>
+                                <li class="main-titulo-link"><a href=views/"#">Pessoal</a></li>
+                                <li class="main-titulo-link"><a href="views/#">Meio Ambiente</a></li>
                             </ul>
                         <div class="main-titulo-2">Operações</div>
                             <ul class=" nav">
@@ -157,7 +157,7 @@ session_start();
                         </form>
                             
                     </div>
-                    <div class="col-lg-10 main-conteudo">
+                    <div class="col-lg-10 main-conteudo" id="tela">
                         <ul class="diaporama1">
                             <li><img src="img/galerie/u1.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO" /></li>
                             <li><img src="img/galerie/u2.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO"/></li>
