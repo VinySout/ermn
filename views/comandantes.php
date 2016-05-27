@@ -3,21 +3,21 @@
 session_start();
 
 ?>
-<html>
-    <head lang="pt-br">
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/png" href="img/brasaoErmn.png">
+<html lang="pt-br">
+    <head lang=pt-br"">
         <title>Estação Radiogoniométrica da Marinha em Natal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- Css -->
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/index.css"/>  
+        <link rel="icon" type="image/png" href="../img/brasaoErmn.png">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">        
+        <link rel="stylesheet" href="../css/index.css"/> 
+        
         <!-- Javascript -->
-        <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-        <script type="text/javascript" src="js/jquery.jDiaporama.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-      
+        <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="../js/comandantes.js"></script>
+        
     </head>
     <body id="wrapper">
         <!-- Barra do site Brasil.gov -->
@@ -76,7 +76,7 @@ session_start();
             </ul>
             <div id="logo">
                 
-                <a id="portal-logo" title href="index.php">
+                <a id="portal-logo" title href="../index.php">
                     <span id="portal-title-1"></span>
                     <h1 id="portal-title" class="corto">ERMN</h1>
                     <span id="portal-descrition"></span>
@@ -140,11 +140,11 @@ session_start();
                     <div class="col-lg-2 main-titulo">
                         <div class="main-titulo-2">Institucional</div>
                             <ul class=" nav">
-                                <li class="  main-titulo-link"><a href="views/missao.php" >Missão</a></li>
-                                <li class=" main-titulo-link"><a href="views/historia.php">História</a></li>
-                                <li class=" main-titulo-link"><a href="views/heraldica.php">Heráldica</a></li>
-                                <li class=" main-titulo-link"><a href="views/comandantes.php">Comandantes</a></li>
-                                <li class=" main-titulo-link"><a href="views/organograma.php">Organograma</a></li>
+                                <li class="  main-titulo-link"><a href="missao.php" >Missão</a></li>
+                                <li class=" main-titulo-link"><a href="historia.php">História</a></li>
+                                <li class=" main-titulo-link"><a href="heraldica.php">Heráldica</a></li>
+                                <li class=" main-titulo-link"><a href="comandantes.php">Comandantes</a></li>
+                                <li class=" main-titulo-link"><a href="organograma.php">Organograma</a></li>
                             </ul>
                         <div class="main-titulo-2">Administração</div>
                             <ul class=" nav">
@@ -162,7 +162,7 @@ session_start();
                                 <li class="main-titulo-link"><a href="#">Posto de Monitoragem</a></li>
                             </ul>
                         <!-- Seção de Login -->
-                        <form action="util/valida.php" method="POST">                            
+                        <form action="../util/valida.php" method="POST">                            
                             <div class="main-titulo-2">Login</div>
                             <table>                            
                                 <tr>
@@ -174,22 +174,29 @@ session_start();
                             </table>                                
                                 <input class="btn btn-xs btn-primary bt-entrar" type="submit" value="Entrar">                                                   
                         </form>
-                        <form action="./util/logoff.php" method="POST">                            
+                        <form action="../util/logoff.php" method="POST">                            
                                     <input class="btn btn-xs btn-primary bt-sair" type="submit" value="Sair">
                         </form>
                             
                     </div>
                     <div class="col-lg-10 main-conteudo" id="tela">
-                        <ul class="diaporama1">
-                            <li><img src="img/galerie/u1.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO" /></li>
-                            <li><img src="img/galerie/u2.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO"/></li>
-                            <li><img src="img/galerie/u3.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO" /></li>
-                            <li><img src="img/galerie/u4.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO"/></li>
-                        </ul>
+                        <section id="content"></section>
+                        <section id="edit">
+                            <div class="adminConfig">
+                            <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                              echo '<form action="../servers/serverComandantes.php" method="POST" enctype="multipart/form-data">';
+                              echo '<input type="file" class="btn" name="foto"/>';
+                              echo '<input class="form-control" type="text" name="nome" placeholder="Graduação/Nome">';
+                              echo '<input class="form-control" type="text" name="periodo" placeholder="Período no Comando">';
+                              echo '<input type="submit" class="btn btn-xs btn-primary" value="inserir"/>';
+                              echo '</form>';
+                              }?>
+                            </div>
+                        </section>
                     </div>
                 </div>
         </section>
-        <footer>
+            <footer>
             <div id="footer">
                 <div class="links">
                     <div class="col-lg-4 coluna-1">

@@ -3,9 +3,9 @@ include_once '../util/conexaoInstitucional.php';
 
          $sql = "SELECT * FROM historia";
             $result = mysqli_query($conexao, $sql);
-            $array_user = array();
+            $array = array();
             while($data = mysqli_fetch_assoc($result)){
-                $array_user[] = $data;
+                $array[] = $data;
                 }
-            echo json_encode($array_user);
+            echo json_encode($array);
             
