@@ -10,12 +10,12 @@ body{
 header{
     color: #fff;
     width: 100%;
-    height: 200px;
+    height: 230px;
     background: #2160bd;
 }
 
 .header{
-    width: 940px;
+    width: 930px;
     margin: 0 auto;
 }
 #wrapper{
@@ -121,7 +121,7 @@ footer{
     margin: 0 auto;
 }
 #footer{
-    width: 920px;
+    width: 930px;
     height: auto;
     background: #2160bd;
     margin: 0 auto;
@@ -133,10 +133,14 @@ footer{
     text-align: center;
     font-size: 15px;
 }
+a:visited{
+    color: #fff;
+}
 .links{
-    width: 920px;
+    color: #fff;
+    width: 930px;
     padding-top: 10px;
-    margin: 0 auto; 
+    margin: 40px auto; 
 }
 .coluna-1{
     text-align: center;
@@ -168,7 +172,7 @@ footer{
 }
 .main-conteudo{
     padding: 0 0 0 100px;
-    width: 75.65%;
+    width: 65.65%;
     height: auto;
 }
 .main-titulo-2{
@@ -208,4 +212,23 @@ footer{
 }
 .form-control{
     margin: 2px;
+}
+#sobre{
+    background: #0f4098;
+    font-size: 15px;
+}
+.list-item{    
+    padding-right: 10px;
+    margin-left: 10px;
+    border-right-width: 2px;
+    border-right-style: groove;
+    border-right-color: #fff;
+}
+.last{
+    padding-right: 10px;
+    margin-left: 10px;
+}
+.brasil-flag{
+    height: auto !important;
+    border-right: 3px solid #dfdfdf !important;
 }

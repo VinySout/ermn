@@ -105,11 +105,33 @@ session_start();
                         <input type="hidden" name="client" value="default_frontend">
                         <input type="hidden" name="output" value="xml_no_dtd">
                         <input type="hidden" name="proxystylesheet" value="default_frontend">
+                         
                     </form>
+                       
                 </div>
                 <!-- Fim do Busca -->
-            </div>                               
-          </div>         
+            </div>              
+          </div>     
+            <div id="sobre">
+                <nav class="container header ">
+                    <ul>
+                                
+                                <li class="list-item first">                                    
+                                    <a class=" links" href="http://www.defesa.gov.br/" target="_blank title=" >Ministério da Defesa</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class=" links" href="http://www.mar.mil.br/" target="_blank title=" >Marinha</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class=" links" href="http://www.eb.mil.br/" target="_blank title=" >Exército</a>
+                                </li>       
+                                <li class="last last-item">
+                                    <a class=" links" href="http://www.fab.mil.br/" target="_blank title=" >Aeronáutica</a>
+                               
+                                </li>
+                            </ul>
+                </nav>
+              </div>
         </header>
         <!-- Fim do Cabeçalho -->
         <section class="container" id="main">
@@ -120,18 +142,18 @@ session_start();
                             <ul class=" nav">
                                 <li class="  main-titulo-link"><a href="views/missao.php" >Missão</a></li>
                                 <li class=" main-titulo-link"><a href="views/historia.php">História</a></li>
-                                <li class=" main-titulo-link"><a href="views/">Heráldica</a></li>
-                                <li class=" main-titulo-link"><a href="views/#">Comandantes</a></li>
-                                <li class=" main-titulo-link"><a href="views/#">Organograma</a></li>
+                                <li class=" main-titulo-link"><a href="views/heraldica.php">Heráldica</a></li>
+                                <li class=" main-titulo-link"><a href="#">Comandantes</a></li>
+                                <li class=" main-titulo-link"><a href="#">Organograma</a></li>
                             </ul>
                         <div class="main-titulo-2">Administração</div>
                             <ul class=" nav">
-                                <li class="main-titulo-link"><a href="views/#">STI</a></li>
-                                <li class="main-titulo-link"><a href="views/#">ComSoc</a></li>
-                                <li class="main-titulo-link"><a href="views/#">SeCom</a></li>
-                                <li class="main-titulo-link"><a href="views/#">Gestoria</a></li>
-                                <li class="main-titulo-link"><a href=views/"#">Pessoal</a></li>
-                                <li class="main-titulo-link"><a href="views/#">Meio Ambiente</a></li>
+                                <li class="main-titulo-link"><a href="#">STI</a></li>
+                                <li class="main-titulo-link"><a href="#">ComSoc</a></li>
+                                <li class="main-titulo-link"><a href="#">SeCom</a></li>
+                                <li class="main-titulo-link"><a href="#">Gestoria</a></li>
+                                <li class="main-titulo-link"><a href="#">Pessoal</a></li>
+                                <li class="main-titulo-link"><a href="#">Meio Ambiente</a></li>
                             </ul>
                         <div class="main-titulo-2">Operações</div>
                             <ul class=" nav">
