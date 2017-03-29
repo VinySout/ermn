@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<?php 
+<?php
 session_start();
 
-include_once '../entity/Comandante.class.php';
-include_once '../util/ConexaoDeInclusao.class.php';
-include_once '../repository/ComandanteRepository.class.php';
-    $conexao = new ConexaoDeInclusao();
-    $comandanteRepository = new ComandanteRepository($conexao);
-    $lista = $comandanteRepository->listarComandantes();
+if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
 
-?>
+    include_once '../entity/Comandante.class.php';
+    include_once '../util/ConexaoDeInclusao.class.php';
+    include_once '../repository/ComandanteRepository.class.php';
+    include_once '../application/ComandanteService.class.php';
+
+    $conexao = new ConexaoDeInclusao();
+    $comandanteService = new ComandanteService($conexao);    
+    
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
+    if(isset($_GET['id'])){        
+    $idComandante = htmlspecialchars($_GET['id']);
+    $lista = $comandanteService->mostrarCmdt($idComandante);    
+    }
+}
+
+?>  
 <html lang="pt-br">
     <head>
         <title>Estação Radiogoniométrica da Marinha em Natal</title>
@@ -187,56 +197,19 @@ include_once '../repository/ComandanteRepository.class.php';
                             
                     </div>
                     <div class="col-lg-10 main-conteudo container" id="tela">
-                        <section>
-                                
-                                <?php 
-                                $comandante = $lista[0];?>
-                                    <div class="atual-comand">                                        
-                                        <figure id="img">
-                                            <img  src="../img/fotosDosComandantes/<?= $comandante->getFoto()?> " width="220px" height="280px"/>
-                                        </figure>
-                                        <h1><?= $comandante->getNome()?></h1>
-                                        <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
-                                            echo '<input type="submit" class="btn btn-xs btn-default editar" id="'.$comandante->getId().'" name="editar" value="editar">';
-                                            echo '<input type="submit" class="btn btn-xs btn-default excluir" id="'.$comandante->getId().'" name="excluir" value="excluir">';
-                                            }?>
-                                        <hr/>
-                                    </div>
-                                                     
-                        </section>
-                        <section>
-                            <?php 
-                                for($i=1; $i < sizeof($lista); $i++){
-                                            $comandante = $lista[$i];
-                                 ?>
-                                    <div class="cmdts-ant">
-                                        <figure id="img">
-                                            
-                                            <img  src="../img/fotosDosComandantes/<?= $comandante->getFoto()?> " width="200px" height="220px"/>
-                                        </figure>
-                                        <h3><?= $comandante->getNome()?></h3>
-                                        <h4><?= $comandante->getPeriodo()?></h4>
-                                        <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
-                                            echo '<input type="submit" class="btn btn-xs btn-default editar" id="'.$comandante->getId().'" name="editar" value="editar">';
-                                            echo '<input type="submit" class="btn btn-xs btn-default excluir" id="'.$comandante->getId().'" name="excluir" value="excluir">';
-                                            }?>
-                                        <hr/>
-                                    </div>
-                                     
-                            <?php }?>
-                            
-                        </section>
-                        <section id="edit">
-                            <div class="adminConfig">
-                            <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
-                              echo '<form action="../servers/serverComandantes.php" method="POST" enctype="multipart/form-data">';
-                              echo '<input type="file" class="btn" name="foto"/>';
-                              echo '<input class="form-control" type="text" name="nome" placeholder="Graduação/Nome">';
-                              echo '<input class="form-control" type="text" name="periodo" placeholder="Período no Comando">';
-                              echo '<input type="submit" class="btn btn-xs btn-primary" value="inserir"/>';
-                              echo '</form>';
-                              }?>
-                            </div>
+                        <section>    
+                            <?php
+                                for($i=0; $i<1; $i++){
+                                    $cmdt = $lista[0];
+                                    ?>        
+                                <form action="../repository/editarComandanteRepository.php" method="POST" enctype="multipart/form-data">
+                                    <input type="hidden" name="id" value="<?= $cmdt->getId()?>" />
+                                    <input type="file" class="btn" name="foto" value="<?= $cmdt->getFoto()?>"/>
+                                    <input class="form-control" type="text" name="nome" value="<?= $cmdt->getNome()?>">
+                                    <input class="form-control" type="text" name="periodo" value="<?= $cmdt->getPeriodo()?>">
+                                    <input type="submit" class="btn btn-xs btn-primary" value="salvar"/>
+                                </form>           
+                                <?php } ?>
                         </section>
                     </div>
                 </div>
@@ -261,3 +234,8 @@ include_once '../repository/ComandanteRepository.class.php';
         </footer>
     </body>
 </html>
+<?php
+}else{
+    header("Location: ../views/comandantes.php");
+    exit;
+}

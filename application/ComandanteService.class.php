@@ -9,6 +9,9 @@ class ComandanteService {
     function inserirComandante(Comandante $comandante){
         $this->incluirComandante->inserir($comandante);
     }
+    function mostrarCmdt($id){
+        return $this->incluirComandante->listaCmdt($id);
+    }
 
     
 }
