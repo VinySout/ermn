@@ -13,11 +13,11 @@ session_start();
         <link rel="icon" type="image/png" href="../img/brasaoErmn.png">
         <link href="../css/bootstrap.min.css" rel="stylesheet">        
         <link rel="stylesheet" href="../css/index.css"/> 
-        <link rel="stylesheet" href="../css/estilos.css"/>
-        
+        <link rel="stylesheet" href="../css/estilos.css"/> 
     </head>
     <body id="wrapper">
-        <?php include './header.php';
+        <?php 
+        include './header.php';
         ?>
         <section class="container" id="main">
             
@@ -25,9 +25,16 @@ session_start();
                     <?php 
                     include './navegacao.php';
                     ?>
-                    <div class="col-md-9">
-                        <p class="styleTitulo" id="organogramaRef">ORGANOGRAMA</p>
-                        <div id="organograma"></div>
+                    <div class="col-md-9 ">
+                        <p class="styleTitulo" id="stiRef">STI</p>
+                        <table>
+                            <tr>
+                                <td class="tbSti"><a href="#">Fainas realizadas</a></td>
+                                <td class="tbSti"><a href="#">Ferramentas</a></td>
+                                <td class="tbSti"><a href="#">Publicações</a></td>
+                                <td class="tbSti"><a href="#">Solicitar um chamado</a></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
         </section>

@@ -1,0 +1,74 @@
+.styleTitulo{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #0e4097;
+    border-top: 4px #0e4097 solid;
+    border-bottom: 1px #0e4097 solid;
+    border-left: 1px #0e4097 solid;
+    border-right: 1px #0e4097 solid;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#missao{
+    font-size: 17px;
+    margin-top: 20px;
+    font-family: Arial;
+    text-align: justify;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+#historia{
+    font-size: 17px;
+    margin-top: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 30px;
+}
+#heraldica{    
+    font-size: 17px;
+    margin-top: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 30px;
+}
+#brasaoHeraldica{
+   margin: 10px auto;
+    width: 220px;
+    height: 300px;
+    background-image: url(../img/brasaoHeraldica.png);
+}
+.legendaAtualCmdt{
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+.legendaNmCmdt{
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+.legendaDtCmdt{
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+#organograma{    
+   margin: 10px auto;
+    width: 650px;
+    height: 440px;
+    background-image: url(../img/organograma.png);
+}
+.tbSti{
+    font-size: 14px;
+    font-family: "Open Sans";
+    background-color:#0e4097; 
+    text-align: center;
+    padding: 10px 27.9px 10px;
+}

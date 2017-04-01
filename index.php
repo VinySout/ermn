@@ -62,15 +62,15 @@ session_start();
           <div class="header container">
             <ul id="portal-siteactions">
                 <li id="siteaction-accessibility" class="design">
-                    <a href="#" title="Acessibiliade" accesskey="5">
-                    Acessibilidade</a>                       
+                    <a href="#iNotesSigDemRef" title="iNotes | SiGDEM" accesskey="5">
+                    iNOTES | SiGDEM</a>                       
                 </li>
                 <li id="siteaction-contraste" class="design">
-                    <a href="#" title="Alto Contraste" accesskey="6">
-                        Alto Contraste</a>
+                    <a href="#loginRef" title="Login" accesskey="6">
+                        LOGIN</a>
                 </li>
                 <li id="siteaction-mapadosite" class="last-item design">
-                    <a href="#" title="Mapa do Site" accesskey="7">Mapa do Site</a>
+                    <a href="#rodapeRef" title="Rodapé" accesskey="7">RODAPÉ</a>
                 </li>
                 
             </ul>
@@ -131,24 +131,25 @@ session_start();
                                 </li>
                             </ul>
                 </nav>
+                
               </div>
         </header>
         <!-- Fim do Cabeçalho -->
         <section class="container" id="main">
             
             <div class="links">
-                    <div class="col-lg-2 main-titulo">
+                    <div class="col-md-2 main-titulo">
                         <div class="main-titulo-2">Institucional</div>
                             <ul class=" nav">
-                                <li class="  main-titulo-link"><a href="views/missao.php" >Missão</a></li>
-                                <li class=" main-titulo-link"><a href="views/historia.php">História</a></li>
-                                <li class=" main-titulo-link"><a href="views/heraldica.php">Heráldica</a></li>
-                                <li class=" main-titulo-link"><a href="views/comandantes.php">Comandantes</a></li>
-                                <li class=" main-titulo-link"><a href="views/organograma.php">Organograma</a></li>
+                                <li class="  main-titulo-link"><a href="views/missao.php#missaoRef" >Missão</a></li>
+                                <li class=" main-titulo-link"><a href="views/historia.php#historiaRef">História</a></li>
+                                <li class=" main-titulo-link"><a href="views/heraldica.php#heraldicaRef">Heráldica</a></li>
+                                <li class=" main-titulo-link"><a href="views/comandantes.php#comandantesRef">Comandantes</a></li>
+                                <li class=" main-titulo-link"><a href="views/organograma.php#organogramaRef">Organograma</a></li>
                             </ul>
                         <div class="main-titulo-2">Administração</div>
                             <ul class=" nav">
-                                <li class="main-titulo-link"><a href="#">STI</a></li>
+                                <li class="main-titulo-link"><a href="views/sti.php#stiRef">STI</a></li>
                                 <li class="main-titulo-link"><a href="#">ComSoc</a></li>
                                 <li class="main-titulo-link"><a href="#">SeCom</a></li>
                                 <li class="main-titulo-link"><a href="#">Gestoria</a></li>
@@ -163,7 +164,7 @@ session_start();
                             </ul>
                         <!-- Seção de Login -->
                         <form action="util/valida.php" method="POST">                            
-                            <div class="main-titulo-2">Login</div>
+                            <div class="main-titulo-2" id="loginRef">Login</div>
                             <table>                            
                                 <tr>
                                     <td><input class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuário"></td>
@@ -179,33 +180,36 @@ session_start();
                         </form>
                             
                     </div>
-                    <div class="col-lg-10 main-conteudo" id="tela">
+                    <div class="col-md-9">
                         <ul class="diaporama1">
-                            <li><img src="img/galerie/u1.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO" /></li>
-                            <li><img src="img/galerie/u2.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO"/></li>
-                            <li><img src="img/galerie/u3.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO" /></li>
-                            <li><img src="img/galerie/u4.JPG" alt="foto aérea do PR" title="Foto aérea do PR e PMO"/></li>
-                        </ul>
-                    </div>
+                            <li><img src="img/galerie/u1.JPG" alt="Ajustando o slide" title="Ajustando o Slide" /></li>
+                            <li><img src="img/galerie/u2.JPG" alt="Estrada Lateral" title="Estrada Lateral"/></li>
+                            <li><img src="img/galerie/u3.JPG" alt="Foto Aérea da ADM" title="Foto Aérea da ADM" /></li>
+                            <li><img src="img/galerie/u4.JPG" alt="Visão distante da ADM" title="Visão Distante da ADM"/></li>
+                        </ul> 
+                        <table class="tabelaEmails" id="iNotesSigDemRef">
+                            <tr>
+                                <td class="tdEmails">
+                                    <a href="#" target="_blank">                                
+                                     <img src="img/iNotes9.png"> </figure> 
+                                    </a>
+                                </td>
+                                <td class="tdEmails">
+                                <a href="#" target="_blank">                               
+                                    <img src="img/sigDem.png">                              
+                                </a>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdEmails">iNotes</td>
+                                <td class="tdEmails">SiGDEM</td>
+                            </tr>
+                    </table> 
+                    </div>                       
                 </div>
         </section>
-        <footer>
-            <div id="footer">
-                <div class="links">
-                    <div class="col-lg-4 coluna-1">
-                        <p><a href="clti.com3dn.mb">CLTI-3DN</a></p>
-                    </div>
-                    <div class="col-lg-4 coluna-2"></div>
-                    <div class="col-lg-4 coluna-3"></div>
-                </div>
-                <div class="footer-dados">
-                <p>
-                    Km 04 da BR-304 - Guarapes - Parnamirim - RN - CEP: 59.146-750<br/>
-                    Tel.: (84) 3643-1151 Retelma: 8350-2403<br/>
-                    *Fundada em 15 de maio de 1986<br/>
-                </p>
-                </div>
-            </div>
-        </footer>
+        <?php 
+        include 'views/footer.php';
+        ?>
     </body>
 </html>

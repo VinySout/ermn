@@ -85,18 +85,18 @@
 				$("li", diapo).hide();
 				$("li:first-child", diapo).addClass("active").fadeIn(options.animationSpeed, init);
 				
-				// Pour chaque élément
+				// Pour chaque ï¿½lï¿½ment
 				$("li", diapo).each(function(){
 					elt = $(this);
 					
 					i = parseInt($("li", diapo).index($(this))+1);
 					$(this).attr("id", "jDiaporama_image_"+i);
 
-					// Affichage de la description si renseigné et activé
+					// Affichage de la description si renseignï¿½ et activï¿½
 					if(options.infos)
 					{
-						var is_desc = ($("img", elt).attr("title") != "");
-						var is_title = ($("img", elt).attr("alt") != "");
+						var is_desc = ($("img", elt).attr("title") !== "");
+						var is_title = ($("img", elt).attr("alt") !== "");
 												
 						if(is_desc)
 							elt.append("<p class='desc'>"+$("img", elt).attr("title")+"</p>");
@@ -107,17 +107,17 @@
 						if(options.currentimage)
 							elt.append("<p class='count'>"+parseInt($("li", diapo).index(elt)+1)+"/"+diapo.children().length+"</p>");
 					}
-				})
+				});
 				
 				// Navigation au clavier
 				if(options.keyboard)
 					$(document).keydown(function(event) {
 						switch(event.keyCode){
-							case 37 : // Flèche gauche
+							case 37 : // Flï¿½che gauche
 								prev();
 							break;
 							
-							case 39 : // Flèche droite
+							case 39 : // Flï¿½che droite
 								next();
 							break;
 						}
@@ -138,7 +138,7 @@
 						$(".jDiaporama_status", diapo.parent()).css("margin-left", -($(".jDiaporama_status", diapo.parent()).width()/2));
 						
 						$(".jDiaporama_status a", diapo.parent()).click(function(){
-							if($("li.active", diapo).attr("id").split("_")[2] != $(this).attr("id").split("_")[2])
+							if($("li.active", diapo).attr("id").split("_")[2] !== $(this).attr("id").split("_")[2])
 								nextImage(options, $(this));
 							return false;
 						})
@@ -222,27 +222,27 @@
 				// Affichage des infos sur l'image courante
 				function displayInfos(elt, display)
 				{
-					var is_desc = ($("img", elt).attr("title") != "");
-					var is_title = ($("img", elt).attr("alt") != "");
+					var is_desc = ($("img", elt).attr("title") !== "");
+					var is_title = ($("img", elt).attr("alt") !== "");
 				
 					if(is_desc)
-						if(display == "show")
+						if(display === "show")
 							$(".desc", elt).slideDown("fast");
 						else
 							$(".desc", elt).slideUp("fast");
 					if(is_title)
-						if(display == "show")
+						if(display === "show")
 							$(".title", elt).slideDown("fast");
 						else
 							$(".title", elt).slideUp("fast");
 					if(options.currentimage)
-						if(display == "show")
+						if(display === "show")
 							$(".count", elt).slideDown("fast");
 						else
 							$(".count", elt).slideUp("fast");
 				}
 				
-				// Affiche l'élément suivant
+				// Affiche l'ï¿½lï¿½ment suivant
 				function nextImage(options, elt)
 				{
 					clearInterval(inter);
@@ -263,8 +263,8 @@
 						
 					if(!pause && options.auto)
 					{
-						if(options.boucles == 0 || (options.boucles > 0 && (diapo.data("current_slide")/diapo.children().length) < options.boucles ))
-							inter = setInterval(function(){displayDiaporama(options)}, (options.delay*1000));
+						if(options.boucles === 0 || (options.boucles > 0 && (diapo.data("current_slide")/diapo.children().length) < options.boucles ))
+							inter = setInterval(function(){displayDiaporama(options);}, (options.delay*1000));
 						else
 							$(".pause", diapo.siblings()).remove();
 					}
@@ -275,7 +275,7 @@
 					current_slide++;
 					diapo.data("current_slide", current_slide);
 					
-					if(sens == "right")
+					if(sens === "right")
 						next();
 					else
 						prev();
