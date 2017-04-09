@@ -14,7 +14,8 @@ session_start();
         ?>
     </head>
     <body id="wrapper">
-        <?php include './header.php';
+        <?php 
+        include './header.php';
         ?>
         <section class="container" id="main">
             
@@ -22,9 +23,10 @@ session_start();
                     <?php 
                     include './navegacao.php';
                     ?>
-                    <div class="col-md-9">
-                        <p class="styleTitulo" id="organogramaRef">ORGANOGRAMA</p>
-                        <div id="organograma"></div>
+                    <div class="col-md-9 ">
+                        <p class="styleTitulo" id="oGuarapesRef">O Guarapes</p>
+                        <p id="oGuarapes">
+                        </p>
                     </div>
                 </div>
         </section>

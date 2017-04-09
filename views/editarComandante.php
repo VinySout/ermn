@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
+ header('Content-Type: text/html; charset=utf-8',true);
+ 
 if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
 
     include_once '../entity/Comandante.class.php';
@@ -26,14 +27,9 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- Css -->
-        <link rel="icon" type="image/png" href="../img/brasaoErmn.png">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">        
-        <link rel="stylesheet" href="../css/index.css"/> 
-        
-        <!-- Javascript -->
-        <script type="text/javascript" src="../js/comandantes.js"></script>
-        
+         <?php 
+            include './cssJsImports.php'; 
+        ?>
     </head>
     <body id="wrapper">
         <?php 
@@ -53,10 +49,11 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
                                     ?>        
                                 <form action="../repository/editarComandanteRepository.php" method="POST" enctype="multipart/form-data">
                                     <input type="hidden" name="id" value="<?= $cmdt->getId()?>" />
-                                    <input type="file" class="btn" name="foto" value="<?= $cmdt->getFoto()?>"/>
+                                    <input type="file" class="btn" name="foto" value="<?=$cmdt->getFoto()?>"/>
                                     <input class="form-control" type="text" name="nome" value="<?= $cmdt->getNome()?>">
                                     <input class="form-control" type="text" name="periodo" value="<?= $cmdt->getPeriodo()?>">
                                     <input type="submit" class="btn btn-xs btn-primary" value="salvar"/>
+                                    <input type="button" class="btn btn-xs btn-default" value="cancelar" onClick="history.go(-1)">
                                 </form>           
                                 <?php } ?>
                         </section>

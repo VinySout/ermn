@@ -28,10 +28,10 @@
                         
     <!-- Seção de Login -->
     <form action="../util/valida.php" method="POST">                            
-        <div class="main-titulo-2" id="loginRef">Login</div>
+        <div class="main-titulo-2">Login</div>
         <table>                            
             <tr>
-                <td><input class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuário"></td>
+                <td><input class="form-control" type="text" name="usuario" id="loginRef" placeholder="Usuário"></td>
             </tr>
             <tr>
                 <td><input class="form-control" type="password" name="senha" id="senha" placeholder="Senha"></td>

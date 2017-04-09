@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php 
 session_start();
+ header('Content-Type: text/html; charset=utf-8',true);
 
 include_once '../entity/Comandante.class.php';
 include_once '../util/ConexaoDeInclusao.class.php';
@@ -15,17 +16,10 @@ include_once '../repository/ComandanteRepository.class.php';
         <title>Estação Radiogoniométrica da Marinha em Natal</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- Css -->
-        <link rel="icon" type="image/png" href="../img/brasaoErmn.png">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">        
-        <link rel="stylesheet" href="../css/index.css"/> 
-        <link rel="stylesheet" href="../css/estilos.css"/>
-        
-        
-        <!-- Javascript -->
-        <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
-        <script type="text/javascript" src="../js/comandantes.js"></script>
+       
+         <?php 
+            include './cssJsImports.php'; 
+        ?>
         
     </head>
     <body id="wrapper">
@@ -50,10 +44,12 @@ include_once '../repository/ComandanteRepository.class.php';
                               echo '<input type="file" class="btn" name="foto"/>';
                               echo '<input class="form-control" type="text" name="nome" placeholder="Graduação/Nome">';
                               echo '<input class="form-control" type="text" name="periodo" placeholder="Período no Comando">';
-                              echo '<input type="submit" class="btn btn-xs btn-primary" value="inserir"/>';
+                              echo '<input type="submit" class="btn btn-xs btn-primary" value="inserir"/>';                           
+                              echo '<input type="reset" class="btn btn-xs btn-default" value="cancelar">';
                               echo '</form>';
                               echo '<hr/>';
-                              }?>
+                            }?>
+                                
                             </div>
                         </section>
                         <section>

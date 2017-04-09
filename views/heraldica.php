@@ -9,11 +9,9 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- Css -->
-        <link rel="icon" type="image/png" href="../img/brasaoErmn.png">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">        
-        <link rel="stylesheet" href="../css/index.css"/> 
-        <link rel="stylesheet" href="../css/estilos.css"/> 
+         <?php 
+            include './cssJsImports.php'; 
+        ?>
     </head>
     <body id="wrapper">
         <?php  
@@ -28,11 +26,13 @@ session_start();
                     <div class="col-md-9">
                         
                         <p class="styleTitulo" id="heraldicaRef">HERÁLDICA</p>
-                        <div id="brasaoHeraldica"></div>
-                        <p id="heraldica">
-                            
+                        
+                        <p class="heraldica">                            
                         O DISTINTIVO para Estação Radiogoniométrica da Marinha em Natal (ERMN) foi aprovado pela Portaria nº 0536, 
-                        do Exmo Sr. Ministro da Marinha, em 27 de maio de 1986, conforme a figura ilustrativa acima.
+                        do Exmo Sr. Ministro da Marinha, em 27 de maio de 1986, conforme a figura ilustrativa abaixo.
+                        </p>
+                        <div id="brasaoHeraldica"></div>
+                        <p class="heraldica">
                         Em um escudo boleado, encimado pela coroa naval e envolto por elipse feita de um cabo de ouro terminado em nó direito, 
                         campo de azul, duas centelhas de ouro de três ramos cada uma, 
                         com os segundos ramos postos em faixa e os terceiros voltados para baixo, terminados em forma de seta e opostos aos dois outros por uma circunferência do mesmo metal; 

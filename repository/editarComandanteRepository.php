@@ -1,4 +1,6 @@
 <?php
+
+    
 $conexao = mysql_connect("localhost","root", ""); 
 if (!$conexao){
     die("Erro ao conectar: " . mysql_error());
@@ -29,5 +31,3 @@ if (!move_uploaded_file($_FILES['foto']['tmp_name'], "../img/fotosDosComandantes
         header("location: ../views/comandantes.php");
             }
 }
-
-?>

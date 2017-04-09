@@ -1,7 +1,7 @@
 .styleTitulo{
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 25px;
+    font-weight: bold;
     color: #0e4097;
     border-top: 4px #0e4097 solid;
     border-bottom: 1px #0e4097 solid;
@@ -28,7 +28,15 @@
     text-align: justify;
     line-height: 30px;
 }
-#heraldica{    
+.heraldica{    
+    font-size: 17px;
+    margin-top: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 30px;
+}
+#heraldica2{    
     font-size: 17px;
     margin-top: 20px;
     font-family: Arial;
@@ -67,8 +75,39 @@
 }
 .tbSti{
     font-size: 14px;
-    font-family: "Open Sans";
+    font-family: Arial;
     background-color:#0e4097; 
+    font-weight: bold;
     text-align: center;
-    padding: 10px 27.9px 10px;
+    padding: 10px 28.4px 10px;
+}
+.tbchamado{
+   
+    width: 50%;
+}
+.tbSolicitacao{
+    text-align: center;
+    margin-left: 30px;
+    width: 660px;
+    padding: 40px;
+}
+.tbSolicitacao td, .tbDetalhes td{
+    padding: 10px 20px;
+}
+.tbtituloSol{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 22px;    
+    color: #737373;
+    text-shadow: blue 0.04em 0.04em 0em;
+    text-align: center;
+}
+.btnDetalhes{
+    text-align: right;
+}
+.tbDetalhes{    
+    text-align: left;
+    margin-left: 30px;
+    width: 660px;
+    padding: 40px;
 }
