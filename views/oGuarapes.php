@@ -24,9 +24,22 @@ session_start();
                     include './navegacao.php';
                     ?>
                     <div class="col-md-9 ">
-                        <p class="styleTitulo" id="oGuarapesRef">O Guarapes</p>
-                        <p id="oGuarapes">
-                        </p>
+                        <p class="styleTitulo" id="oGuarapesRef">O Guarapes</p>                          
+                        <section id="oGuarapes">                            
+                            <div>
+                            <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                              echo '<hr/>';
+                              echo '<form action="../servers/serverGuarapes.php" method="POST" enctype="multipart/form-data">';
+                              echo '<label> Selecione a Imagem: </label><input type="file" class="btn" name="imagem"/>';
+                              echo '<label> Selecione o arquivo PDF: </label><input type="file" class="btn" name="pdf"/>';
+                              echo '<input class="form-control" type="text" name="edicao" placeholder="Edição do Informativo. Ex: 1º Edição O Guarapes">';
+                              echo '<input type="submit" class="btn btn-xs btn-primary" value="inserir"/>';                           
+                              echo '<input type="reset" class="btn btn-xs btn-default" value="cancelar">';
+                              echo '</form>';
+                              echo '<hr/>';
+                            }?>                                
+                            </div>
+                        </section>                        
                     </div>
                 </div>
         </section>
