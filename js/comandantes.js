@@ -14,7 +14,7 @@ var loadData = function(){
     });
 }
 $(document).ready(function(){
-    $(".excluir").click(function(event){
+    $(".excluirCmdt").click(function(event){
         event.preventDefault();
         console.log(event);
         if(confirm("Confirma a exclusão deste comandante da página?\nAVISO: o processo não poderá ser revertido!")) {
@@ -28,7 +28,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $(".editar").click(function(event){
+    $(".editarCmdt").click(function(event){
         event.preventDefault();
         console.log(event);
         if(confirm("você deseja realmente alterar os  dados desse comandante?")) {

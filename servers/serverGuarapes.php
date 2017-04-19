@@ -13,20 +13,30 @@ if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
             if(isset($_FILES['imagem']) && isset($_FILES['pdf'])){
                 
                 $uploadfile = $_FILES['imagem']['name'];
+                $uploadfile2 = $_FILES['pdf']['name'];
+                
+                
                 $ext = strtolower(strrchr($uploadfile,"."));
+                $ext2 = strtolower(strrchr($uploadfile2, "."));
+                
                 $nome_atual = time().$ext;
+                $nome_atual2 = time().$ext2;
+                
+                
+                if(!move_uploaded_file($_FILES['pdf']['tmp_name'], "../img/edicoesOGuarapes/".$nome_atual2)){
+                    }else{
+                    echo 'Não foi Possivel Concluir o Upload do PDF';
+                }
+                
                 if (!move_uploaded_file($_FILES['imagem']['tmp_name'], "../img/edicoesOGuarapes/".$nome_atual)) {
-                      //grava na base de dados, no campo imagem, somente o nome da imagem que ficou gravado na variável $uploadfile que criamos acima.
                     }
                 else {
                     echo 'Não foi Possivel Concluir o Upload da Imagem';
-                    //não foi possível concluir o upload da imagem.
                 }
                 
-
                 
                 $edicao = htmlspecialchars($_POST['edicao']);
-                $guarapes = new Guarapes(0, $nome_atual, "teste", $edicao);
+                $guarapes = new Guarapes(0, $nome_atual, $nome_atual2, $edicao);
                 $guarapesService->inserirGuarapes($guarapes);
                 header('Location: ../views/oGuarapes.php#oGuarapesRef');
                 

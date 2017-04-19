@@ -57,14 +57,12 @@ include_once '../repository/ComandanteRepository.class.php';
                                 <?php 
                                 $comandante = $lista[0];?>
                                     <div class="atual-comand">                                        
-                                        <figure id="img">
-                                            <img  src="../img/fotosDosComandantes/<?= $comandante->getFoto()?> " width="220px" height="280px"/>
-                                        </figure>
+                                        <img  src="../img/fotosDosComandantes/<?= $comandante->getFoto()?> " width="220px" height="280px"/>                                        
                                         <h4 class="legendaAtualCmdt"><?= $comandante->getNome()?></h4>
                                         <h5 class="legendaDtCmdt">Comandante atual</h5>
                                         <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
-                                            echo '<input type="submit" class="btn btn-xs btn-default editar" id="'.$comandante->getId().'" name="editar" value="editar">';
-                                            echo '<input type="submit" class="btn btn-xs btn-default excluir" id="'.$comandante->getId().'" name="excluir" value="excluir">';
+                                            echo '<input type="submit" class="btn btn-xs btn-default editarCmdt" id="'.$comandante->getId().'" name="editarCmdt" value="editar">';
+                                            echo '<input type="submit" class="btn btn-xs btn-default excluirCmdt" id="'.$comandante->getId().'" name="excluirCmdt" value="excluir">';
                                             }?>
                                         <hr/>
                                     </div>
@@ -83,8 +81,8 @@ include_once '../repository/ComandanteRepository.class.php';
                                         <h5 class="legendaNmCmdt"><?= $comandante->getNome()?></h5>
                                         <h6 class="legendaDtCmdt"><?= $comandante->getPeriodo()?></h6>
                                         <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
-                                            echo '<input type="submit" class="btn btn-xs btn-default editar" id="'.$comandante->getId().'" name="editar" value="editar">';
-                                            echo '<input type="submit" class="btn btn-xs btn-default excluir" id="'.$comandante->getId().'" name="excluir" value="excluir">';
+                                            echo '<input type="submit" class="btn btn-xs btn-default editarCmdt" id="'.$comandante->getId().'" name="editarCmdt" value="editar">';
+                                            echo '<input type="submit" class="btn btn-xs btn-default excluirCmdt" id="'.$comandante->getId().'" name="excluirCmdt" value="excluir">';
                                             }?>
                                         <hr/>
                                     </div>

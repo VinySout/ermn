@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <?php 
 session_start();
+    header('Content-Type: text/html; charset=utf-8',true);
+
+    include_once '../entity/Guarapes.class.php';
+    include_once '../util/ConexaoDeInclusao.class.php';
+    include_once '../repository/GuarapesRepository.class.php';
+    
+        $conexao = new ConexaoDeInclusao();
+        $guarapesRepository = new GuarapesRepository($conexao);
+        $lista = $guarapesRepository->listaGuarapes();
 
 ?>
 <html lang="pt-br">
@@ -25,8 +34,7 @@ session_start();
                     ?>
                     <div class="col-md-9 ">
                         <p class="styleTitulo" id="oGuarapesRef">O Guarapes</p>                          
-                        <section id="oGuarapes">                            
-                            <div>
+                        <section id="oGuarapes">                                
                             <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
                               echo '<hr/>';
                               echo '<form action="../servers/serverGuarapes.php" method="POST" enctype="multipart/form-data">';
@@ -37,9 +45,39 @@ session_start();
                               echo '<input type="reset" class="btn btn-xs btn-default" value="cancelar">';
                               echo '</form>';
                               echo '<hr/>';
-                            }?>                                
-                            </div>
-                        </section>                        
+                            }?>                                     
+                        </section>
+                        <section>                                
+                                <?php 
+                                $guarapes = $lista[0];?>
+                                    <div class="atual-comand">                                          
+                                        <a href="../img/edicoesOGuarapes/<?= $guarapes->getPdf()?>" target="_blank title="><img  src="../img/edicoesOGuarapes/<?= $guarapes->getImagem()?>" width="220px" height="280px"/></a>
+                                        <h4 class="legendaAtualCmdt"><?= $guarapes->getEdicao()?></h4>
+                                        <h5 class="legendaDtCmdt">Última Edição</h5>
+                                        <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                                            echo '<input type="submit" class="btn btn-xs btn-default editarEdc" id="'.$guarapes->getId().'" name="editarEdc" value="editar">';
+                                            echo '<input type="submit" class="btn btn-xs btn-default excluirEdc" id="'.$guarapes->getId().'" name="excluirEdc" value="excluir">';
+                                            }?>
+                                        <hr/>
+                                    </div>                                                     
+                        </section>
+                        <section>
+                            <?php 
+                                for($i=1; $i < sizeof($lista); $i++){
+                                            $guarapes = $lista[$i];
+                                 ?>
+                                    <div class="cmdts-ant">
+                                        <a href="../img/edicoesOGuarapes/<?= $guarapes->getPdf()?>" target="_blank title="><img  src="../img/edicoesOGuarapes/<?= $guarapes->getImagem()?> " width="200px" height="220px"/></a>
+                                        <h5 class="legendaNmCmdt"><?= $guarapes->getEdicao()?></h5>
+                                        <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                                            echo '<input type="submit" class="btn btn-xs btn-default editarEdc" id="'.$guarapes->getId().'" name="editarEdc" value="editar">';
+                                            echo '<input type="submit" class="btn btn-xs btn-default excluirEdc" id="'.$guarapes->getId().'" name="excluirEdc" value="excluir">';
+                                            }?>
+                                        <hr/>
+                                    </div>
+                                     
+                            <?php }?>
+                        </section>
                     </div>
                 </div>
         </section>

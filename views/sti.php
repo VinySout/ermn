@@ -63,10 +63,10 @@ include_once '../repository/ChamadoStiRepository.class.php';
                                         <td><?= $chamadoSti->getSData()?></td> 
                                         <td><?= $chamadoSti->getProvidenciado()?></td>
                                         <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
-                                        echo '<td><input type="submit" class="btn btn-xs btn-default editar" id="'.$chamadoSti->getId().'" name="editar" value="editar">';
-                                        echo '<input type="submit" class="btn btn-xs btn-danger excluir" id="'.$chamadoSti->getId().'" name="excluir" value="excluir"></td>';
+                                        echo '<td><input type="submit" class="btn btn-xs btn-default editarCall" id="'.$chamadoSti->getId().'" name="editarCall" value="editar">';
+                                        echo '<input type="submit" class="btn btn-xs btn-danger excluirCall" id="'.$chamadoSti->getId().'" name="excluirCall" value="excluir"></td>';
                                         }?>
-                                        <td class="btnDetalhes"><input type="submit" class="btn btn-xs btn-default detalhes" id="<?php echo $chamadoSti->getId()?>" name="detalhes" value="Detalhes"</td>
+                                        <td class="btnDetalhes"><input type="submit" class="btn btn-xs btn-default detalhesCall" id="<?php echo $chamadoSti->getId()?>" name="detalhesCall" value="Detalhes"</td>
                             <?php }?>
                                  </tr>
                                 </table> 
