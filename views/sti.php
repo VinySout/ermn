@@ -74,6 +74,7 @@ include_once '../repository/ChamadoStiRepository.class.php';
                             
                         <session>
                             <hr/>
+                           
                             <table class="tbchamado ">
                                 <form action="../servers/serverChamadoSti.php" method="POST" enctype="multipart/form-data">
                                     <tr>
@@ -87,7 +88,8 @@ include_once '../repository/ChamadoStiRepository.class.php';
                                     </tr>                                
                                     <tr>
                                         <td><textarea class="form-control" name="descricao" placeholder="Descrição"></textarea></td>
-                                    </tr>
+                                    </tr>                                        
+                                    <tr>
                                         <?php $sData = date ("d-m-Y"); 
                                         echo"<input type='hidden' name='sData' value='$sData'>";
                                         ?>                                    
@@ -97,13 +99,11 @@ include_once '../repository/ChamadoStiRepository.class.php';
                                         <input type="hidden" name="solucao" value="aguardando">
                                         <input type="hidden" name="substituicao" value="aguardando">
                                         <input type="hidden" name="itemDesc" value="aguardando">
-                                    <tr>
                                         <td><input type="submit" class="btn btn-xs btn-primary" value="Enviar">
                                         <input type="reset" class="btn btn-xs btn-default" value="Cancelar">
                                         <td>
                                     </tr>
                                 </form>
-
                             </table>
                         </session>  
                     </div>

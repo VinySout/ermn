@@ -2,7 +2,6 @@
 header('Content-Type: text/html; charset=utf-8',true);
 session_start();
     
-    
     include_once '../entity/ChamadoSti.class.php';
     include_once '../repository/ChamadoStiRepository.class.php';
     include_once '../util/ConexaoDeInclusao.class.php';
@@ -30,4 +29,3 @@ session_start();
                 header('Location: ../views/sti.php#stiRef');
             }
         }
-

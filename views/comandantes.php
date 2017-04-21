@@ -17,9 +17,9 @@ include_once '../repository/ComandanteRepository.class.php';
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        
-         <?php 
-            include './cssJsImports.php'; 
-        ?>
+        <?php 
+           include './cssJsImports.php'; 
+       ?>
         
     </head>
     <body id="wrapper">
