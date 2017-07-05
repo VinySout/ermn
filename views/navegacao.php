@@ -9,7 +9,7 @@
             <li class=" main-titulo-link"><a href="organograma.php#organogramaRef">Organograma</a></li>
         </ul>
 
-    <div class="main-titulo-2">Administração</div>
+    <div class="main-titulo-2">Departamentos</div>
         <ul class=" nav">
             <li class="main-titulo-link"><a href="sti.php#stiRef">STI</a></li>
             <li class="main-titulo-link"><a href="#">ComSoc</a></li>
@@ -17,10 +17,6 @@
             <li class="main-titulo-link"><a href="#">Gestoria</a></li>
             <li class="main-titulo-link"><a href="#">Pessoal</a></li>
             <li class="main-titulo-link"><a href="#">Meio Ambiente</a></li>
-        </ul>
-
-    <div class="main-titulo-2">Operações</div>
-        <ul class=" nav">
             <li class="main-titulo-link"><a href="#">Posto de Transmissão</a></li>
             <li class="main-titulo-link"><a href="#">Posto de Recepção</a></li>
             <li class="main-titulo-link"><a href="#">Posto de Monitoragem</a></li>

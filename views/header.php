@@ -1,16 +1,9 @@
-    <?php  
-        if (!$sock = @fsockopen('www.google.com.br', 80, $num, $error, 5)) { 
-        /*A barra Brasil.gov não será mostrada*/
-        }
-        else {
-    ?>
+
         <!-- Barra site Brasil.gov -->
             <div id="barra-brasil"></div>
             <script src="http://barra.brasil.gov.br/barra.js" type="text/javascript" defer async></script>
         <!-- Fim da Barra Brasil.gov -->
-    <?php    
-        }
-    ?>  
+
 
         <!-- Inicio do Cabeçalho -->
         <header role="banner">
@@ -62,7 +55,7 @@
                     <!-- busca no bussola da MB -->
                     <div class="buscar">                    
                         <form class="form-inline" action="http://bussola.mb/search" method="GET" target="mainFrame">
-                            <input type="text" class="form-control"  placeholder="Buscar">
+                            <input type="text" name="q" class="form-control"  placeholder="Pesquisa Bússola">
                             <input type="submit" class="btn btn-default img-buscar" value="">
                             <input type="hidden" name="site" value="default_collection">
                             <input type="hidden" name="client" value="default_frontend">
@@ -86,22 +79,19 @@
                             <a href="oGuarapes.php#oGuarapesRef">O Guarapes</a>
                         </li>
                         <li class="lst-item">
-                            <a href="#" target="_blank title=" >Amazônia Azul</a>
-                        </li>
-                        <li class="lst-item">
-                            <a href="#" target="_blank title=" >Bono Sede</a>
+                            <a href="http://www.com3dn.mb/?q=bono-sede" target="_blanktitle=" >Bono Sede</a>
                         </li>       
                         <li class="lst-item">
-                            <a href="#" target="_blank title=" >Sinopse</a>   
+                            <a href="http://rumb.dabm.mb/RUMB/" target="_blanktitle=" >RUMB</a>   
                         </li>
                         <li class="lst-item">
-                            <a href="#" target="_blank title=" >SisBol-Web</a>                                      
+                            <a href="http://netuno.dadm.mb/" target="_blanktitle=" >Programa Netuno</a>                                    
                         </li>
                         <li class="lst-item">
-                            <a href="#" target="_blank title=" >Web Bono</a>                                      
+                            <a href="http://bono.dctim.mb/wps/portal" target="_blanktitle=" >Web Bono</a>                                      
                         </li>
                         <li class="last last-itm">
-                            <a href="#" target="_blank title=" >Catálogo MB</a>   
+                            <a href="https://catalogo2.dadm.mb:8443/novocat/" target="_blanktitle=" >Catálogo MB</a>   
                         </li>                        
                     </ul>
                     </div>
@@ -112,8 +102,8 @@
                         <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">EPO McAfee</a></li>
-                          <li><a href="#">Submenu2</a></li>
+                          <li><a href="https://www.marinha.mil.br/saudenaval" target="_blanktitle=">Saúde Naval</a></li>
+                          <li><a href="http://www.dpmm.mb/?q=node/97" target="_blanktitle=">SisBol-Web</a></li>
                           <li><a href="#">Submenu3</a></li>
                           <li class="divider"></li>
                           <li><a href="#">Submenu4</a></li>

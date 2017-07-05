@@ -15,4 +15,4 @@ $query = "DELETE FROM chamadosti WHERE id=".$id;
         mysql_query($query); // A instrução delete irá apagar todos os dados da id recebida
 
 mysql_close($conexao); // Fechando a conexão com o banco de dados
-header("location: ../views/sti.php");
+header("location: ../views/sti.php#stiRef");

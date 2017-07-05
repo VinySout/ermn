@@ -36,7 +36,7 @@ $(document).ready(function(){
             
             var id = $(this).attr("id");
             console.log(id);
-            $(location).attr('href',"../views/editarChamadoSti.php?id="+id);
+            $(location).attr('href',"../views/editarChamadoSti.php?id="+id+"#stiRef");
    
         }
     });
@@ -49,7 +49,7 @@ $(document).ready(function(){
             // cria a variável idSolicitacao e pega o valor id do botão
             var id = $(this).attr("id");
             console.log(id);
-            $(location).attr('href',"../views/detalhesChamadoSti.php?id="+id);
+            $(location).attr('href',"../views/detalhesChamadoSti.php?id="+id+"#stiRef");
    
     });
 });

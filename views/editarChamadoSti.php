@@ -42,6 +42,9 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
                     include './navegacao.php';
                     ?>
                     <div class="col-md-9">
+                        <p class="styleTitulo" id="stiRef">STI</p>
+                        <hr/>
+                        <div class="tbtituloSol" colspan="5" id="cEditRef">Editar Chamado</div>
                         <section>    
                             <?php
                                 for($i=0; $i<1; $i++){

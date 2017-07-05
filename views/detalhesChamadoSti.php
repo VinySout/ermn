@@ -38,8 +38,10 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
             <div class="links">
                     <?php 
                     include './navegacao.php';
-                    ?>
+                    ?>                
                     <div class="col-md-9">
+                        <p class="styleTitulo" id="stiRef">STI</p>
+                        <hr/>
                         <section>    
                             <?php
                                 for($i=0; $i<1; $i++){
@@ -47,6 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
                                     ?>
                             <table class="tbDetalhes">
                                 <tr>
+                                    <td class="tbtituloSol" colspan="5" id="cDetalRef">Detalhes do Chamado</td></tr>
                                     <td>
                                     <input type="button" class="btn btn-xs btn-default" value="voltar" onClick="history.go(-1)"> 
                                     </td>

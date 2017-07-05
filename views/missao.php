@@ -27,9 +27,9 @@ session_start();
                         <p class="styleTitulo" id="missaoRef">MISSÃO</p>
                         <p id="missao">
                            A Estação Radiogoniométrica da Marinha em Natal tem o propósito de contribuir para:<br/>
-                            I – O pleno exercício do Comando pelas autoridades navais;<br/>
-                            II – O controle das Comunicações Navais; e<br/>
-                            III – As atividades de inteligência das comunicações na Marinha do Brasil.
+                            • O pleno exercício do Comando pelas autoridades navais;<br/>
+                            • O controle das Comunicações Navais; e<br/>
+                            • As atividades de inteligência das comunicações na Marinha do Brasil.
                         </p>
                     </div>
                 </div>
