@@ -117,8 +117,8 @@
                     </ul>
                     </div>
                     <div class="btn-group linksBarraHeader2">
-                        <button type="button" class="btn btn-primary btnLinks">Links</button>
                         <button type="button" class="btn btn-primary btnLinks" data-toggle="dropdown" aria-expanded="false">
+                        Outros
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -151,14 +151,14 @@
                         <div class="main-titulo-2">Departamentos</div>
                             <ul class=" nav">
                                 <li class="main-titulo-link"><a href="views/sti.php#stiRef">STI</a></li>
-                                <li class="main-titulo-link"><a href="#">ComSoc</a></li>
-                                <li class="main-titulo-link"><a href="#">SeCom</a></li>
-                                <li class="main-titulo-link"><a href="#">Gestoria</a></li>
-                                <li class="main-titulo-link"><a href="#">Pessoal</a></li>
-                                <li class="main-titulo-link"><a href="#">Meio Ambiente</a></li>                            
-                                <li class="main-titulo-link"><a href="#">Posto de Transmissão</a></li>                                
-                                <li class="main-titulo-link"><a href="#">Posto de Monitoragem</a></li>
-                                <li class="main-titulo-link"><a href="#">Profesp</a></li>
+                                <li class="main-titulo-link"><a href="views/comSoc.php#comSocRef">COMSOC</a></li>
+                                <li class="main-titulo-link"><a href="views/seCom.php#seComRef">SECOM</a></li>
+                                <li class="main-titulo-link"><a href="views/gestoria.php#gestoriaRef">Gestoria</a></li>
+                                <li class="main-titulo-link"><a href="views/pessoal.php#pessoalRef">Pessoal</a></li>
+                                <li class="main-titulo-link"><a href="views/meioAmbiente.php#mAmbienteRef">Gestão Ambiental</a></li>                            
+                                <li class="main-titulo-link"><a href="views/postoTransmissao.php#ptRef">Posto de Transmissão</a></li>                                
+                                <li class="main-titulo-link"><a href="views/postoMonitoragem.php#pmoRef">Posto de Monitoragem</a></li>
+                                <li class="main-titulo-link"><a href="views/profesp.php#profespRef">PROFESP</a></li>
                             </ul>
                         <!-- Seção de Login -->
                         <form action="util/valida.php" method="POST">                            
@@ -186,6 +186,7 @@
                             <li><img src="img/galerie/u4.jpg" alt="Tipulação Atual" title="Tipulação Atual"/></li>
                             <li><img src="img/galerie/u5.jpg" alt="Nosso Profesp" title="Nosso Profesp"/></li>
                             <li><img src="img/galerie/u6.jpg" alt="Visão Aérea da ADM" title="Visão Aérea da ADM"/></li>
+                            <li><img src="img/galerie/u7.jpg" alt="Alinhando o JS" title="Alinhando o JS"/></li>
                         </ul> 
                         <table class="tabelaEmails" id="iNotesSigDemRef">
                             <tr>

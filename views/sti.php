@@ -35,13 +35,14 @@ include_once '../repository/ChamadoStiRepository.class.php';
                     ?>
                     <div class="col-md-9 ">
                         
-                        <p class="styleTitulo" id="stiRef">STI</p>
+                        
                         <table>
+                            <tr><p class="styleTitulo" id="stiRef">STI</p></tr>
                             <tr>
-                                <td class="tbSti"><a href="#">Ferramentas</a></td>
-                                <td class="tbSti"><a href="#">Publicações</a></td>
-                                <td class="tbSti"><a href="#cRealRef">Chamados Realizados</a></td>
-                                <td class="tbSti"><a href="#openChamRef">Realizar chamado</a></td>                                                                
+                                <td class="tbSubTitle"><a href="#">Ferramentas</a></td>
+                                <td class="tbSubTitle"><a href="#">Publicações</a></td>
+                                <td class="tbSubTitle"><a href="#cRealRef">Chamados Realizados</a></td>
+                                <td class="tbSubTitle"><a href="#openChamRef">Realizar chamado</a></td>                                                                
                             </tr>
                         </table>                          
                         <session>

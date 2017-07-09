@@ -115,10 +115,9 @@
 /**** Status ****/
 
 .jDiaporama_status{
-	text-align:center;
 	margin-top:10px;
 	position:absolute;
-	left:50%;
+	left:45%;
 	display:none
 }
 
@@ -129,7 +128,7 @@
 	width:10px;
 	height:10px;
 	text-indent:-9999px;
-	margin-right:10px;
+	margin-right:5px;
 }
 
 .jDiaporama_status a.active, .jDiaporama_status a:hover{

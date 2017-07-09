@@ -12,14 +12,14 @@
     <div class="main-titulo-2">Departamentos</div>
         <ul class=" nav">
             <li class="main-titulo-link"><a href="sti.php#stiRef">STI</a></li>
-            <li class="main-titulo-link"><a href="#">ComSoc</a></li>
-            <li class="main-titulo-link"><a href="#">SeCom</a></li>
-            <li class="main-titulo-link"><a href="#">Gestoria</a></li>
-            <li class="main-titulo-link"><a href="#">Pessoal</a></li>
-            <li class="main-titulo-link"><a href="#">Meio Ambiente</a></li>
-            <li class="main-titulo-link"><a href="#">Posto de Transmissão</a></li>
-            <li class="main-titulo-link"><a href="#">Posto de Recepção</a></li>
-            <li class="main-titulo-link"><a href="#">Posto de Monitoragem</a></li>
+            <li class="main-titulo-link"><a href="comSoc.php#comSocRef">COMSOC</a></li>
+            <li class="main-titulo-link"><a href="seCom.php#seComRef">SECOM</a></li>
+            <li class="main-titulo-link"><a href="gestoria.php#gestoriaRef">Gestoria</a></li>
+            <li class="main-titulo-link"><a href="pessoal.php#pessoalRef">Pessoal</a></li>
+            <li class="main-titulo-link"><a href="meioAmbiente.php#mAmbienteRef">Gestão Ambiental</a></li>
+            <li class="main-titulo-link"><a href="postoTransmissao.php#ptRef">Posto de Transmissão</a></li>
+            <li class="main-titulo-link"><a href="postoMonitoragem.php#pmoRef">Posto de Monitoragem</a></li>
+            <li class="main-titulo-link"><a href="profesp.php#profespRef">PROFESP</a></li>
         </ul>
                         
     <!-- Seção de Login -->

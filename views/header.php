@@ -95,9 +95,9 @@
                         </li>                        
                     </ul>
                     </div>
-                    <div class="btn-group linksBarraheader2">
-                        <button type="button" class="btn btn-primary btnLinks">Links</button>
+                    <div class="btn-group linksBarraHeader2">
                         <button type="button" class="btn btn-primary btnLinks" data-toggle="dropdown" aria-expanded="false">
+                        Outros
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                         </button>
