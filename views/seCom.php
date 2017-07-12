@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+<?php 
+session_start();
 
+?>
 <html lang="pt-br">
     <head>
         <title>Estação Radiogoniométrica da Marinha em Natal</title>

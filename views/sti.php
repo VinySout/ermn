@@ -63,7 +63,7 @@ include_once '../repository/ChamadoStiRepository.class.php';
                                         <td><?= $chamadoSti->getUsuario()?></td>
                                         <td><?= $chamadoSti->getSData()?></td> 
                                         <td><?= $chamadoSti->getProvidenciado()?></td>
-                                        <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                                        <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
                                         echo '<td><input type="submit" class="btn btn-xs btn-default editarCall" id="'.$chamadoSti->getId().'" name="editarCall" value="editar">';
                                         echo '<input type="submit" class="btn btn-xs btn-danger excluirCall" id="'.$chamadoSti->getId().'" name="excluirCall" value="excluir"></td>';
                                         }?>

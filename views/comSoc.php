@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+
+?>
 <html lang="pt-br">
     <head>
         <title>Estação Radiogoniométrica da Marinha em Natal</title>
@@ -24,10 +28,10 @@
                         <table>
                             <tr><p class="styleTitulo" id="comSocRef">Comunicação Social</p></tr>                           
                             <tr>
+                                <td class="tbSubTitle"><a href="#">Destaques do Semestre</a></td>
+                                <td class="tbSubTitle"><a href="oGuarapes.php#comSocRef">Informativos</a></td>                               
                                 <td class="tbSubTitle"><a href="#">Notícias</a></td>
-                                <td class="tbSubTitle"><a href="#">Publicações</a></td>
-                                <td class="tbSubTitle"><a href="#">Doações</a></td>
-                                <td class="tbSubTitle"><a href="#">Programações</a></td>                                                                
+                                <td class="tbSubTitle"><a href="#">Contato</a></td>                                                              
                             </tr>
                         </table>                          
                         <session>

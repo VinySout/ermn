@@ -26,12 +26,13 @@ session_start();
                     ?>
                     <div class="col-md-9 ">                        
                         <table>
-                            <tr><p class="styleTitulo" id="profespRef">PROFESP</p></tr>                           
+                            <tr><p class="styleTitulo" id="netunoRef">Programa Netuno</p></tr>                           
                             <tr>
-                                <td class="tbSubTitle"><a href="#">Programações</a></td>
-                                <td class="tbSubTitle"><a href="#">Atividades</a></td>
-                                <td class="tbSubTitle"><a href="#">Apoiadores</a></td>
-                                <td class="tbSubTitle"><a href="#">Outros</a></td>                                                                  
+                                <td class="tbSubTitle"><a href="#">Planejamento Estratégico Organizacional</a></td>
+                                <td class="tbSubTitle"><a href="#">Cartas de Serviços</a></td>
+                                <td class="tbSubTitle"><a href="#">Gestão de Riscos</a></td>
+                                <td class="tbSubTitle"><a href="#">Indicadores de Desenpenhos</a></td>
+                                <td class="tbSubTitle"><a href="#">Planos de Melhoria da Gestão</a></td>
                             </tr>
                         </table>                          
                         <session>

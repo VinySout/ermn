@@ -6,8 +6,7 @@ class ConexaoDeInclusao {
     private $usuario = "root";
     private $senha = "";
     private $banco = "intranetermn";
-    private $mysqli; 
-    
+    private $mysqli;   
     
     public function __construct() {
         $this->mysqli = new mysqli($this->host, $this->usuario,$this->senha,$this->banco);

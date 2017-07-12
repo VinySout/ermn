@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php 
+<?php
 session_start();
     header('Content-Type: text/html; charset=utf-8',true);
 
@@ -18,24 +18,33 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <?php 
-            include './cssJsImports.php'; 
+        <?php
+            include './cssJsImports.php';
         ?>
     </head>
     <body id="wrapper">
-        <?php 
+        <?php
         include './header.php';
         ?>
         <section class="container" id="main">
             
             <div class="links">
-                    <?php 
+                    <?php
                     include './navegacao.php';
                     ?>
                     <div class="col-md-9 ">
-                        <p class="styleTitulo" id="oGuarapesRef">O Guarapes</p>                          
-                        <section id="oGuarapes">                                
-                            <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                        <table>
+                            <tr><p class="styleTitulo" id="comSocRef">Comunicação Social</p></tr>              
+                            <tr>
+                                <td class="tbSubTitle"><a href="#">Destaques do Semestre</a></td>
+                                <td class="tbSubTitle"><a href="oGuarapes.php#comSocRef">Informativos</a></td>                                
+                                <td class="tbSubTitle"><a href="#">Notícias</a></td>
+                                <td class="tbSubTitle"><a href="#">Contato</a></td>                                                    
+                            </tr>                            
+                        </table>
+                        <section id="oGuarapes">
+                            <hr/>
+                            <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
                               echo '<hr/>';
                               echo '<form action="../servers/serverGuarapes.php" method="POST" enctype="multipart/form-data">';
                               echo '<label> Selecione a Imagem: </label><input type="file" class="btn" name="imagem"/>';
@@ -54,7 +63,7 @@ session_start();
                                         <a href="../img/edicoesOGuarapes/<?= $guarapes->getPdf()?>" target="_blank title="><img  src="../img/edicoesOGuarapes/<?= $guarapes->getImagem()?>" width="220px" height="280px"/></a>
                                         <h4 class="legendaAtualCmdt"><?= $guarapes->getEdicao()?></h4>
                                         <h5 class="legendaDtCmdt">Última Edição</h5>
-                                        <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                                        <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
                                             echo '<input type="submit" class="btn btn-xs btn-default editarEdc" id="'.$guarapes->getId().'" name="editarEdc" value="editar">';
                                             echo '<input type="submit" class="btn btn-xs btn-default excluirEdc" id="'.$guarapes->getId().'" name="excluirEdc" value="excluir">';
                                             }?>
@@ -69,7 +78,7 @@ session_start();
                                     <div class="cmdts-ant">
                                         <a href="../img/edicoesOGuarapes/<?= $guarapes->getPdf()?>" target="_blank title="><img  src="../img/edicoesOGuarapes/<?= $guarapes->getImagem()?> " width="200px" height="220px"/></a>
                                         <h5 class="legendaNmCmdt"><?= $guarapes->getEdicao()?></h5>
-                                        <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                                        <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
                                             echo '<input type="submit" class="btn btn-xs btn-default editarEdc" id="'.$guarapes->getId().'" name="editarEdc" value="editar">';
                                             echo '<input type="submit" class="btn btn-xs btn-default excluirEdc" id="'.$guarapes->getId().'" name="excluirEdc" value="excluir">';
                                             }?>

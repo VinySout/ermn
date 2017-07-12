@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+
+?>
 <html lang="pt-br">
     <head>
         <title>Estação Radiogoniométrica da Marinha em Natal</title>
@@ -27,7 +31,7 @@
                                 <td class="tbSubTitle"><a href="#">Melhores Práticas</a></td>
                                 <td class="tbSubTitle"><a href="#">Gestão de produtos recicláveis</a></td>
                                 <td class="tbSubTitle"><a href="#">Informativos</a></td>
-                                <td class="tbSubTitle"><a href="#">Apoiadores</a></td>                                                                
+                                <td class="tbSubTitle"><a href="#">Contato</a></td>                                                                
                             </tr>
                         </table>                          
                         <session>

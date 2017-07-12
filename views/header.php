@@ -38,17 +38,17 @@
                     <!--Saudação a usuário logado-->
                     <div class="saudacao">
                         <?php 
-                            if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != ""){
+                            if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
                                 $hr = date(" H ");
                                 if($hr >= 12 && $hr<18) {
-                                    $resp = "Boa tarde ".$_SESSION['usuario'];}
+                                    $resp = "Boa tarde ".$_SESSION['usuarioNome'];}
                                 else if ($hr >= 0 && $hr <12 ){
-                                    $resp = "Bom dia ".$_SESSION['usuario'];}
+                                    $resp = "Bom dia ".$_SESSION['usuarioNome'];}
                                 else {
-                                    $resp = "Boa noite ".$_SESSION['usuario'];}
+                                    $resp = "Boa noite ".$_SESSION['usuarioNome'];}
                                 echo "$resp";
                             }
-                        ?>
+                        ?>     
                     </div>
                     <!--Fim da Saudação-->
                     
@@ -76,7 +76,7 @@
                     <div class="linksBarraHeader">    
                     <ul>                                
                         <li class="lst-item first">                                    
-                            <a href="oGuarapes.php#oGuarapesRef">O Guarapes</a>
+                            <a href="https://www.marinha.mil.br/" target="_blanktitle=">Marinha do Brasil</a>
                         </li>
                         <li class="lst-item">
                             <a href="http://www.com3dn.mb/?q=bono-sede" target="_blanktitle=" >Bono Sede</a>
@@ -85,7 +85,7 @@
                             <a href="http://rumb.dabm.mb/RUMB/" target="_blanktitle=" >RUMB</a>   
                         </li>
                         <li class="lst-item">
-                            <a href="http://netuno.dadm.mb/" target="_blanktitle=" >Programa Netuno</a>                                    
+                            <a href="https://www.marinha.mil.br/saudenaval" target="_blanktitle=" >Saúde Naval</a>                                   
                         </li>
                         <li class="lst-item">
                             <a href="http://bono.dctim.mb/wps/portal" target="_blanktitle=" >Web Bono</a>                                      
@@ -102,11 +102,11 @@
                         <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="https://www.marinha.mil.br/saudenaval" target="_blanktitle=">Saúde Naval</a></li>
+                          <li><a href="http://netuno.dadm.mb/" target="_blanktitle=">Programa Netuno</a></li>
                           <li><a href="http://www.dpmm.mb/?q=node/97" target="_blanktitle=">SisBol-Web</a></li>
-                          <li><a href="#">Submenu3</a></li>
-                          <li class="divider"></li>
-                          <li><a href="#">Submenu4</a></li>
+                          <li><a href="http://www.ccsm.mb" target="_blanktitle=">CCSM</a></li>
+                          <li><a href="http://www.densm.mb" target="_blanktitle=">DENSM</a></li>                          
+                          <li><a href="http://www.gcm.mb" target="_blanktitle=">GCM</a></li>
                         </ul>
                     </div>
                 </nav> 
