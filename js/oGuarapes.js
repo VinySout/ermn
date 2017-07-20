@@ -34,7 +34,7 @@ $(document).ready(function(){
             
             var idEdicao = $(this).attr("id");
             console.log(idEdicao);
-            $(location).attr('href',"../views/editarGuarapes.php?id="+idEdicao);
+            $(location).attr('href',"../usoInterno/editarGuarapes.php?id="+idEdicao);
    
         }
     });

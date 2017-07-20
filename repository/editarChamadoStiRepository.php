@@ -1,12 +1,5 @@
 <?php
-
-
-    
-$conexao = mysql_connect("localhost","root", ""); 
-if (!$conexao){
-    die("Erro ao conectar: " . mysql_error());
-}
-mysql_select_db("intranetermn", $conexao);
+$connection = new \mysqli("localhost", "root", "", "intranetermn");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST['nome']) && isset($_POST['usuario'])){
@@ -21,10 +14,13 @@ $providenciado = htmlspecialchars($_POST['providenciado']);
 $solucao = htmlspecialchars($_POST['solucao']);
 $substituicao = htmlspecialchars($_POST['substituicao']);
 $itemDesc = htmlspecialchars($_POST['itemDesc']);
-    
-        $query = "UPDATE chamadosti SET id ='$id', nome='$nome', usuario='$usuario', descricao='$descricao', sdata='$sData', infpc='$infPc', infpc2='$infPc2', providenciado='$providenciado', solucao='$solucao', substituicao='$substituicao', itemdesc='$itemDesc' WHERE id=".$id;
-        mysql_query($query); 
-        mysql_close($conexao); 
+        
+        
+            $stmt = $connection->prepare("UPDATE chamadosti SET id =?, nome=?, usuario=?, descricao=?, sdata=?, infpc=?, infpc2=?, providenciado=?, solucao=?, substituicao=?, itemdesc=? WHERE id=".$id);
+            $stmt->bind_param("issssssssss", $id, $nome, $usuario, $descricao, $sData, $infPc, $infPc2, $providenciado, $solucao, $substituicao, $itemDesc);
+            $stmt->execute();
+            
+            mysqli_close($connection);
         header("location: ../views/sti.php");
             }
 }

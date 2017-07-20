@@ -24,14 +24,14 @@ if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
                 
                 
                 if(!move_uploaded_file($_FILES['pdf']['tmp_name'], "../img/edicoesOGuarapes/".$nome_atual2)){
-                    }else{
-                    echo 'Não foi Possivel Concluir o Upload do PDF';
+                }else{
+                    echo ' Não foi Possivel Concluir o Upload do PDF ';
                 }
                 
                 if (!move_uploaded_file($_FILES['imagem']['tmp_name'], "../img/edicoesOGuarapes/".$nome_atual)) {
                     }
                 else {
-                    echo 'Não foi Possivel Concluir o Upload da Imagem';
+                    echo ' Não foi Possivel Concluir o Upload da Imagem ';
                 }
                 
                 

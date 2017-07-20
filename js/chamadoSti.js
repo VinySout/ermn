@@ -36,7 +36,7 @@ $(document).ready(function(){
             
             var id = $(this).attr("id");
             console.log(id);
-            $(location).attr('href',"../views/editarChamadoSti.php?id="+id+"#stiRef");
+            $(location).attr('href',"../usoInterno/editarChamadoSti.php?id="+id+"#stiRef");
    
         }
     });

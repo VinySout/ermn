@@ -1,11 +1,7 @@
 <?php
 
     
-$conexao = mysql_connect("localhost","root", ""); 
-if (!$conexao){
-    die("Erro ao conectar: " . mysql_error());
-}
-mysql_select_db("intranetermn", $conexao);
+$connection = new \mysqli("localhost", "root", "", "intranetermn");  
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST['nome']) && isset($_POST['periodo'])){
@@ -25,9 +21,11 @@ if (!move_uploaded_file($_FILES['foto']['tmp_name'], "../img/fotosDosComandantes
                     echo 'Não foi Possivel Concluir o Upload da Imagem';
                 }
                 
-        $query = "UPDATE comandantes SET id ='$id', foto='$nome_atual', nome='$nome', periodo='$periodo' WHERE id=".$id;
-        mysql_query($query); 
-        mysql_close($conexao); 
+         $stmt = $connection->prepare("UPDATE comandantes SET id =?, foto=?, nome=?, periodo=? WHERE id=".$id);
+            $stmt->bind_param("isss", $id, $nome_atual, $nome, $periodo);
+            $stmt->execute();
+          
+        mysqli_close($conexao); 
         header("location: ../views/comandantes.php");
             }
 }

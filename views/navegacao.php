@@ -15,9 +15,7 @@
             <li class="main-titulo-link"><a href="gestoria.php#gestoriaRef">Gestoria</a></li>
             <li class="main-titulo-link"><a href="pessoal.php#pessoalRef">Pessoal</a></li>
             <li class="main-titulo-link"><a href="profesp.php#profespRef">Profesp</a></li>
-            <li class="main-titulo-link"><a href="netuno.php#netunoRef">Programa Netuno</a></li>
-            <li class="main-titulo-link"><a href="postoMonitoragem.php#pmoRef">Posto de Monitoragem</a></li>
-            <li class="main-titulo-link"><a href="postoTransmissao.php#ptRef">Posto de Transmissão</a></li>                                
+            <li class="main-titulo-link"><a href="netuno.php#netunoRef">Programa Netuno</a></li>                                
             <li class="main-titulo-link"><a href="seCom.php#seComRef">SeCom</a></li> 
             <li class="main-titulo-link"><a href="sti.php#stiRef">Seção de TI</a></li>             
         </ul>

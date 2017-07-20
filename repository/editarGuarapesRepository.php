@@ -1,11 +1,6 @@
 <?php
 
-    
-$conexao = mysql_connect("localhost","root", ""); 
-if (!$conexao){
-    die("Erro ao conectar: " . mysql_error());
-}
-mysql_select_db("intranetermn", $conexao);
+$connection = new \mysqli("localhost", "root", "", "intranetermn");    
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_FILES['imagem']) && isset($_FILES['pdf'])){
@@ -33,10 +28,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     echo 'Não foi Possivel Concluir o Upload da Imagem';
                 }
                 
-                
-        $query = "UPDATE oguarapes SET id ='$id', imagem='$nome_atual', pdf='$nome_atual2', edicao='$edc' WHERE id=".$id;
-        mysql_query($query); 
-        mysql_close($conexao); 
+            $stmt = $connection->prepare("UPDATE oguarapes SET id =?, imagem=?, pdf=?, edicao=? WHERE id=".$id);
+            $stmt->bind_param("isss", $id, $nome_atual, $nome_atual2, $edc);
+            $stmt->execute();
+            
+        mysqli_close($connection); 
         header("location: ../views/oGuarapes.php");
             }
 }

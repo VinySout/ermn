@@ -111,6 +111,9 @@
                         <li class="lst-item">
                             <a href="http://bono.dctim.mb/wps/portal" target="_blanktitle=" >Web Bono</a>                                      
                         </li>
+                        <li class="lst-item">
+                            <a href="http://mensageiro.ctim.mb/sparkweb/index.html" target="_blank=" >Spark Web</a>                                      
+                        </li>
                         <li class="last last-itm">
                             <a href="https://catalogo2.dadm.mb:8443/novocat/" target="_blanktitle=" >Catálogo MB</a>   
                         </li>                        
@@ -155,9 +158,7 @@
                                 <li class="main-titulo-link"><a href="views/gestoria.php#gestoriaRef">Gestoria</a></li>
                                 <li class="main-titulo-link"><a href="views/pessoal.php#pessoalRef">Pessoal</a></li>
                                 <li class="main-titulo-link"><a href="views/profesp.php#profespRef">Profesp</a></li>
-                                <li class="main-titulo-link"><a href="views/netuno.php#netunoRef">Programa Netuno</a></li>
-                                <li class="main-titulo-link"><a href="views/postoMonitoragem.php#pmoRef">Posto de Monitoragem</a></li>
-                                <li class="main-titulo-link"><a href="views/postoTransmissao.php#ptRef">Posto de Transmissão</a></li>                                
+                                <li class="main-titulo-link"><a href="views/netuno.php#netunoRef">Programa Netuno</a></li>                                
                                 <li class="main-titulo-link"><a href="views/seCom.php#seComRef">SeCom</a></li> 
                                 <li class="main-titulo-link"><a href="views/sti.php#stiRef">Seção de TI</a></li> 
                             </ul>
@@ -187,7 +188,7 @@
                             <li><img src="img/galerie/u4.jpg" alt="Tipulação Atual" title="Tipulação Atual"/></li>
                             <li><img src="img/galerie/u5.jpg" alt="Nosso Profesp" title="Nosso Profesp"/></li>
                             <li><img src="img/galerie/u6.jpg" alt="Visão Aérea da ADM" title="Visão Aérea da ADM"/></li>
-                            <li><img src="img/galerie/u7.jpg" alt="Alinhando o JS" title="Alinhando o JS"/></li>
+                            <!--<li><img src="img/galerie/u7.jpg" alt="Alinhando o JS" title="Alinhando o JS"/></li>-->
                         </ul> 
                         <table class="tabelaEmails" id="iNotesSigDemRef">
                             <tr>

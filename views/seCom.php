@@ -29,7 +29,7 @@ session_start();
                             <tr><p class="styleTitulo" id="seComRef">Secretaria de Comunicações</p></tr>                           
                             <tr>
                                 <td class="tbSubTitle"><a href="#">Notícias</a></td>
-                                <td class="tbSubTitle"><a href="#">Publicações</a></td>
+                                <td class="tbSubTitle"><a href="../usoInterno/publicacoes.php#seComRef">Publicações</a></td>
                                 <td class="tbSubTitle"><a href="#">Informativos</a></td>
                                 <td class="tbSubTitle"><a href="#">Programações</a></td>                                                                
                             </tr>

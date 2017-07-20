@@ -19,6 +19,8 @@ header{
     margin: 0 auto;
 }
 .linksBarraHeader{
+    margin-top: 8px;
+    font-size: 1.2em;
     float: left;
 }
 .linksBarraHeader2{
@@ -140,9 +142,13 @@ footer{
 .footer-dados{
     padding-top: 5px;
     padding-bottom: 5px;
-    color: #fff;
+    color: #87CEFA;
     text-align: center;
     font-size: 15px;
+}
+.copyleft {
+  display:inline-block;
+  transform: rotate(180deg);
 }
 a:visited{
     color: #fff;
@@ -232,7 +238,7 @@ a:visited{
     background: #0f4098;
     font-size: 12px;
 }
-.lst-item{   
+.lst-item{
     padding-right: 10px;
     margin-left: 10px;
     border-right-width: 2px;
@@ -253,7 +259,7 @@ a:visited{
 }
 
 .tabelaEmails{
-    margin-top: 600px;
+    margin-top: 500px;
     margin-left: 120px;
 }
 .tdEmails{

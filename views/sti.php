@@ -42,7 +42,7 @@ include_once '../repository/ChamadoStiRepository.class.php';
                                 <td class="tbSubTitle"><a href="#">Ferramentas</a></td>
                                 <td class="tbSubTitle"><a href="#">Publicações</a></td>
                                 <td class="tbSubTitle"><a href="#cRealRef">Chamados Realizados</a></td>
-                                <td class="tbSubTitle"><a href="#openChamRef">Realizar chamado</a></td>                                                                
+                                <td class="tbSubTitle"><a href="../usoInterno/abrirChamadoSti.php#stiRef">Realizar chamado</a></td>                                                                
                             </tr>
                         </table>                          
                         <session>
@@ -71,42 +71,7 @@ include_once '../repository/ChamadoStiRepository.class.php';
                             <?php }?>
                                  </tr>
                                 </table> 
-                        </session>
-                            
-                        <session>
-                            <hr/>
-                           
-                            <table class="tbchamado ">
-                                <form action="../servers/serverChamadoSti.php" method="POST" enctype="multipart/form-data">
-                                    <tr>
-                                        <td class="tbtituloSol" id="openChamRef">Realizar chamado</td>
-                                    </tr>
-                                    <tr>                            
-                                        <td><input class="form-control" type="text" name="nome" placeholder="Solicitante: Graduação/Nome de guerra"></td>                            
-                                    </tr>                                    
-                                    <tr> 
-                                        <td><input class="form-control" type="text" name="usuario" placeholder="Usuário de Login: 'Ex. ermn-111'"></td>
-                                    </tr>                                
-                                    <tr>
-                                        <td><textarea class="form-control" name="descricao" placeholder="Descrição"></textarea></td>
-                                    </tr>                                        
-                                    <tr>
-                                        <?php $sData = date ("d-m-Y"); 
-                                        echo"<input type='hidden' name='sData' value='$sData'>";
-                                        ?>                                    
-                                        <input type="hidden" name="infPc" value="<?php $ip = getenv("REMOTE_ADDR"); echo $ip;?>">                                 
-                                        <input type="hidden" name="infPc2" value="<?php $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']); echo $hostname; ?>">
-                                        <input type="hidden" name="providenciado" value="aguardando">
-                                        <input type="hidden" name="solucao" value="aguardando">
-                                        <input type="hidden" name="substituicao" value="aguardando">
-                                        <input type="hidden" name="itemDesc" value="aguardando">
-                                        <td><input type="submit" class="btn btn-xs btn-primary" value="Enviar">
-                                        <input type="reset" class="btn btn-xs btn-default" value="Cancelar">
-                                        <td>
-                                    </tr>
-                                </form>
-                            </table>
-                        </session>  
+                        </session>                         
                     </div>
                 </div>
         </section>

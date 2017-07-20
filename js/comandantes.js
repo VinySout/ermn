@@ -36,7 +36,7 @@ $(document).ready(function(){
             // cria a variável idProduto e pega o valor id do botão
             var id = $(this).attr("id");
             console.log(id);
-            $(location).attr('href',"../views/editarComandante.php?id="+id);
+            $(location).attr('href',"../usoInterno/editarComandante.php?id="+id);
    
         }
     });
