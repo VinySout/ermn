@@ -81,6 +81,9 @@
     width: 660px;
     padding: 10px 5px;
 }
+.tbSubTitle a{
+    color: #fff;
+}
 .tbchamado{   
     width: 50%;
 }
@@ -93,13 +96,12 @@
 .tbSolicitacao td, .tbDetalhes td{
     padding: 10px 20px;
 }
-.tbtituloSol{
-    font-weight: bolder;
+.subTituloSti{
     text-align: center;
+    font-weight: bolder;
     font-size: 22px;    
     color: #737373;
     text-shadow: blue 0.04em 0.04em 0em;
-    text-align: center;
 }
 .btnDetalhes{
     text-align: right;

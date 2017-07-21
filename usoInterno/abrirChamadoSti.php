@@ -31,7 +31,7 @@ include_once '../repository/ChamadoStiRepository.class.php';
             
             <div class="links">
                     <?php 
-                    include '../views/navegacao.php';
+                    include './navegacaoUsoInterno.php';
                     ?>
                     <div class="col-md-9 ">
                         

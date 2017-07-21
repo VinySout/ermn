@@ -21,8 +21,10 @@
     <body id="wrapper">
     
         <!-- Barra site Brasil.gov -->
-            <div id="barra-brasil"></div>
+        
+<!--            <div id="barra-brasil"></div>
             <script src="http://barra.brasil.gov.br/barra.js" type="text/javascript" defer async></script>
+            -->
         <!-- Fim da Barra Brasil.gov -->
         
         
@@ -131,6 +133,8 @@
                           <li><a href="http://www.ccsm.mb" target="_blanktitle=">CCSM</a></li>
                           <li><a href="http://www.densm.mb" target="_blanktitle=">DENSM</a></li>                          
                           <li><a href="http://www.gcm.mb" target="_blanktitle=">GCM</a></li>
+                          <li><a href="http://internet.ctim.mb/score/login.php" target="_blanktitle=">Score 1.3</a></li>
+                          <li><a href="https://www.compartilhamentodearquivos.mar.mil.br/login.php" target="_blanktitle=">Compartilhamento de Arquivos na MB</a></li>
                         </ul>
                     </div>
                 </nav> 

@@ -39,7 +39,7 @@ session_start();
             
             <div class="links">
                     <?php 
-                    include '../views/navegacao.php';
+                    include './navegacaoUsoInterno.php';
                     ?>
                     <div class="col-md-9 ">
                         <p class="styleTitulo" id="oGuarapesRef">O Guarapes</p>      

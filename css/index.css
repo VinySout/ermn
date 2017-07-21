@@ -150,9 +150,9 @@ footer{
   display:inline-block;
   transform: rotate(180deg);
 }
-a:visited{
-    color: #fff;
-}
+/*    a:visited{
+        color: #fff;
+    }*/
 .links{
     width: 930px;
     padding-top: 10px;
