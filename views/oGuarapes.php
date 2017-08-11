@@ -4,12 +4,24 @@ session_start();
     header('Content-Type: text/html; charset=utf-8',true);
 
     include_once '../entity/Guarapes.class.php';
+    include_once '../entity/Cardapio.class.php';
+    include_once '../entity/PlanoDia.class.php'; 
     include_once '../util/ConexaoDeInclusao.class.php';
     include_once '../repository/GuarapesRepository.class.php';
+    include_once '../repository/PlanoDiaRepository.class.php';
+    include_once '../repository/CardapioRepository.class.php';
     
-        $conexao = new ConexaoDeInclusao();
-        $guarapesRepository = new GuarapesRepository($conexao);
-        $lista = $guarapesRepository->listaGuarapes();
+    $conexao = new ConexaoDeInclusao();
+    $guarapesRepository = new GuarapesRepository($conexao);
+    $lista = $guarapesRepository->listaGuarapes();
+        
+    $planoDiaRepository = new PlanoDiaRepository($conexao);
+    $pdList = $planoDiaRepository->listarPlanoDia();
+    $ultimoPd = $pdList[0];
+
+    $cardapioRepository = new CardapioRepository($conexao);
+    $cardapioList = $cardapioRepository->listarCardapio();
+    $ultimoCardapio = $cardapioList[0];
 
 ?>
 <html lang="pt-br">
@@ -33,19 +45,10 @@ session_start();
                     include './navegacao.php';
                     ?>
                     <div class="col-md-9 ">
-                        <table>
-                            <tr><p class="styleTitulo" id="comSocRef">Comunicação Social</p></tr>              
-                            <tr>
-                                <td class="tbSubTitle"><a href="#">Destaques do Semestre</a></td>
-                                <td class="tbSubTitle"><a href="oGuarapes.php#comSocRef">Informativos</a></td>                                
-                                <td class="tbSubTitle"><a href="#">Notícias</a></td>
-                                <td class="tbSubTitle"><a href="#">Contato</a></td>                                                    
-                            </tr>                            
-                        </table>
+                        <div class="styleTitulo" id="informativoRef">Informativo o Guarapes</div>
                         <section id="oGuarapes">
                             <hr/>
                             <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
-                              echo '<hr/>';
                               echo '<form action="../servers/serverGuarapes.php" method="POST" enctype="multipart/form-data">';
                               echo '<label> Selecione a Imagem: </label><input type="file" class="btn" name="imagem"/>';
                               echo '<label> Selecione o arquivo PDF: </label><input type="file" class="btn" name="pdf"/>';

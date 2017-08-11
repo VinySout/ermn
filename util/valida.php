@@ -1,7 +1,7 @@
 <?php
 
 header('Content-Type: text/html; charset=utf-8',true);
-
+    include_once './ConexaoDeInclusao.class.php';
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $username = filter_input(INPUT_POST, "usuario", FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
@@ -9,7 +9,7 @@ $password = filter_input(INPUT_POST, "senha", FILTER_UNSAFE_RAW);
 
 if ($username && $password) {
   try {
-    $connection = new \mysqli("localhost", "root", "", "intranetermn");
+    $connection = new \mysqli("localhost", "root", "sabotagem", "intranetermn");
     $stmt = $connection->prepare("SELECT `id`, `senha` FROM `usuarios` WHERE `usuario` = ? LIMIT 1");
     $stmt->bind_param("s", $username);
     $stmt->execute();

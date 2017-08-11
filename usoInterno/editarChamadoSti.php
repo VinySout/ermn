@@ -6,17 +6,29 @@ session_start();
 if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
 
     include_once '../entity/ChamadoSti.class.php';
+    include_once '../entity/Cardapio.class.php';
+    include_once '../entity/PlanoDia.class.php';
     include_once '../util/ConexaoDeInclusao.class.php';
     include_once '../repository/ChamadoStiRepository.class.php';
     include_once '../application/ChamadoStiService.class.php';
+    include_once '../repository/PlanoDiaRepository.class.php';
+    include_once '../repository/CardapioRepository.class.php';
 
     $conexao = new ConexaoDeInclusao();
-    $chamadoStiService = new ChamadoStiService($conexao);    
+    $chamadoStiService = new ChamadoStiService($conexao);
+    
+    $planoDiaRepository = new PlanoDiaRepository($conexao);
+    $pdList = $planoDiaRepository->listarPlanoDia();
+    $ultimoPd = $pdList[0];
+
+    $cardapioRepository = new CardapioRepository($conexao);
+    $cardapioList = $cardapioRepository->listarCardapio();
+    $ultimoCardapio = $cardapioList[0];
     
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
-    if(isset($_GET['id'])){        
+    if(isset($_GET['id'])){
     $idChamadoSti = htmlspecialchars($_GET['id']);
-    $lista = $chamadoStiService->mostrarChamadoStiId($idChamadoSti);    
+    $lista = $chamadoStiService->mostrarChamadoStiId($idChamadoSti);
     }
 }
 

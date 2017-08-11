@@ -1,9 +1,9 @@
 
         <!-- Barra site Brasil.gov -->
         
-<!--            <div id="barra-brasil"></div>
+            <div id="barra-brasil"></div>
             <script src="http://barra.brasil.gov.br/barra.js" type="text/javascript" defer async></script>
-            -->
+            
         <!-- Fim da Barra Brasil.gov -->
 
 
@@ -93,7 +93,7 @@
                             <a href="http://bono.dctim.mb/wps/portal" target="_blanktitle=" >Web Bono</a>                                      
                         </li>
                         <li class="lst-item">
-                            <a href="http://mensageiro.ctim.mb/sparkweb/index.html" target="_blank=" >Spark Web</a>                                      
+                            <a href="http://www.dpmm.mb/?q=node/97" target="_blanktitle=">SisBol-Web</a>
                         </li>
                         <li class="last last-itm">
                             <a href="https://catalogo2.dadm.mb:8443/novocat/" target="_blanktitle=" >Catálogo MB</a>   
@@ -102,18 +102,16 @@
                     </div>
                     <div class="btn-group linksBarraHeader2">
                         <button type="button" class="btn btn-primary btnLinks" data-toggle="dropdown" aria-expanded="false">
-                        Outros
+                        Links Úteis
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="http://netuno.dadm.mb/" target="_blanktitle=">Programa Netuno</a></li>
-                          <li><a href="http://www.dpmm.mb/?q=node/97" target="_blanktitle=">SisBol-Web</a></li>
-                          <li><a href="http://www.ccsm.mb" target="_blanktitle=">CCSM</a></li>
-                          <li><a href="http://www.densm.mb" target="_blanktitle=">DENSM</a></li>                          
-                          <li><a href="http://www.gcm.mb" target="_blanktitle=">GCM</a></li>
-                          <li><a href="http://internet.ctim.mb/score/login.php" target="_blanktitle=">Score 1.3</a></li>
-                          <li><a href="https://www.compartilhamentodearquivos.mar.mil.br/login.php" target="_blanktitle=">Compartilhamento de Arquivos na MB</a></li>
+                          <li><a href="http://www.comprasgovernamentais.gov.br/" target="_blank">Compras Net</a></li>
+                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>                                                     
+                          <li><a href="http://www.densm.mb" target="_blank">Diretoria de Ensino da Marinha</a></li>                          
+                          <li><a href="http://www.gcm.mb" target="_blank">Gabinete do Comandante da Marinha</a></li> 
+                          <li><a href="http://www.ccsm.mb" target="_blank">Centro de Comunicação Social da Marinha</a></li>
                         </ul>
                     </div>
                 </nav> 

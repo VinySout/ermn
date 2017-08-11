@@ -4,11 +4,24 @@ session_start();
  header('Content-Type: text/html; charset=utf-8',true);
 
 include_once '../entity/ChamadoSti.class.php';
+include_once '../entity/Cardapio.class.php';
+include_once '../entity/PlanoDia.class.php'; 
 include_once '../util/ConexaoDeInclusao.class.php';
+include_once '../repository/PlanoDiaRepository.class.php';
+include_once '../repository/CardapioRepository.class.php';
 include_once '../repository/ChamadoStiRepository.class.php';
+
     $conexao = new ConexaoDeInclusao();
     $chamadoStiRepository = new ChamadoStiRepository($conexao);
     $lista = $chamadoStiRepository->listarChamadoSti();
+    
+    $planoDiaRepository = new PlanoDiaRepository($conexao);
+    $pdList = $planoDiaRepository->listarPlanoDia();
+    $ultimoPd = $pdList[0];
+
+    $cardapioRepository = new CardapioRepository($conexao);
+    $cardapioList = $cardapioRepository->listarCardapio();
+    $ultimoCardapio = $cardapioList[0];
 
 ?>
 
@@ -37,29 +50,23 @@ include_once '../repository/ChamadoStiRepository.class.php';
                         
                         
                         <table>
-                            <tr><p class="styleTitulo" id="stiRef">STI</p></tr>
-                            <tr>
-                                <td class="tbSubTitle"><a href="#">Ferramentas</a></td>
-                                <td class="tbSubTitle"><a href="#">Publicações</a></td>
-                                <td class="tbSubTitle"><a href="../views/sti.php#cRealRef">Chamados Realizados</a></td>
-                                <td class="tbSubTitle"><a href="#stiRef">Realizar chamado</a></td>                                                                
-                            </tr>
+                            <tr><p class="styleTitulo" id="stiRef">Abrir Chamado de suporte ao STI</p></tr>
                         </table>
                         <session>
                             <hr/>
                             <form action="../servers/serverChamadoSti.php" method="POST" enctype="multipart/form-data">
                                 <table class="tbchamado ">
                                         <tr>
-                                            <td class="tbtituloSol" id="openChamRef">Realizar chamado</td>
+                                            <td class="tbtituloSol" id="openChamRef"><label for="nome">Realizar chamado:</label></td>
                                         </tr>
-                                        <tr>                            
-                                            <td><input class="form-control" type="text" name="nome" placeholder="Solicitante: Graduação/Nome de guerra"></td>                            
+                                        <tr>                                            
+                                            <td><input class="form-control" type="text" name="nome" id="nome" placeholder="Solicitante: Graduação/Nome de guerra" autofocus required></td>                            
                                         </tr>                                    
                                         <tr> 
-                                            <td><input class="form-control" type="text" name="usuario" placeholder="Usuário de Login: 'Ex. ermn-111'"></td>
+                                            <td><input class="form-control" type="text" name="usuario" placeholder="Usuário de Login: 'Ex. ermn-111'" required></td>
                                         </tr>                                
                                         <tr>
-                                            <td><textarea class="form-control" name="descricao" placeholder="Descrição"></textarea></td>
+                                            <td><textarea class="form-control" name="descricao" placeholder="Descrição" required></textarea></td>
                                         </tr>                                        
                                         <tr>
                                             <?php $sData = date ("d-m-Y"); 
@@ -73,7 +80,7 @@ include_once '../repository/ChamadoStiRepository.class.php';
                                             <input type="hidden" name="itemDesc" value="aguardando">
                                             <td><input type="submit" class="btn btn-xs btn-primary" value="Enviar">
                                             <input type="reset" class="btn btn-xs btn-default" value="Cancelar">
-                                            <td>
+                                            </td>
                                         </tr>
                                 </table>
                             </form>

@@ -4,12 +4,24 @@ session_start();
  header('Content-Type: text/html; charset=utf-8',true);
 
 include_once '../entity/ChamadoSti.class.php';
+include_once '../entity/Cardapio.class.php';
+include_once '../entity/PlanoDia.class.php'; 
 include_once '../util/ConexaoDeInclusao.class.php';
 include_once '../repository/ChamadoStiRepository.class.php';
+include_once '../repository/PlanoDiaRepository.class.php';
+include_once '../repository/CardapioRepository.class.php';
+
     $conexao = new ConexaoDeInclusao();
     $chamadoStiRepository = new ChamadoStiRepository($conexao);
     $lista = $chamadoStiRepository->listarChamadoSti();
+    
+    $planoDiaRepository = new PlanoDiaRepository($conexao);
+    $pdList = $planoDiaRepository->listarPlanoDia();
+    $ultimoPd = $pdList[0];
 
+    $cardapioRepository = new CardapioRepository($conexao);
+    $cardapioList = $cardapioRepository->listarCardapio();
+    $ultimoCardapio = $cardapioList[0];
 ?>
 
 <html lang="pt-br">
@@ -37,45 +49,18 @@ include_once '../repository/ChamadoStiRepository.class.php';
                         
                         
                         <table>
-                            <tr><p class="styleTitulo" id="stiRef">STI</p></tr>
-                            <tr>
-                                <td class="tbSubTitle"><a href="#ferramentaRef">Ferramentas</a></td>
-                                <td class="tbSubTitle"><a href="#">Publicações</a></td>
-                                <td class="tbSubTitle"><a href="#cRealRef">Chamados Realizados</a></td>
-                                <td class="tbSubTitle"><a href="../usoInterno/abrirChamadoSti.php#stiRef">Realizar chamado</a></td>                                                                
-                            </tr>
+                            <tr><p class="styleTitulo" id="stiRef">Chamados Realizados</p></tr>
                         </table>
                         <session>
                             <hr/>
-                                        
-                            <table class="table">  
-                                <tr class="subTituloSti" colspan="2" id="ferramentaRef"><th>Ferramentas</th><th></th></tr>   
-                                <tr><th>Cartilha de Segurança</th><th></th></tr>
-                                <tr><th></th><th><a href="../img/cartilha/cartilha-checklist.pdf" target="_blanktitle=">Checklist</a></th></tr>
-                                <tr><th>Parte I</th><th><a href="../img/cartilha/cartilha-01-conceitos.pdf" target="_blanktitle=">Conceitos de Segurança</a></th></tr>
-                                <tr><th>Parte II</th><th><a href="../img/cartilha/cartilha-02-prevencao.pdf" target="_blanktitle=">Riscos Envolvidos no Uso da Internet e Métodos de Prevenção</a></th></tr>
-                                <tr><th>Parte III</th><th><a href="../img/cartilha/cartilha-03-privacidade.pdf" target="_blanktitle=">Privacidade</a></th></tr>
-                                <tr><th>Parte IV</th><th><a href="../img/cartilha/cartilha-04-fraudes.pdf" target="_blanktitle=">Fraudes na Internet</a></th></tr>
-                                <tr><th>Parte V</th><th><a href="../img/cartilha/cartilha-05-banda-larga-wireless.pdf" target="_blanktitle=">Redes de Banda Larga e Redes Sem Fio (Wireless)</a></th></tr>
-                                <tr><th>Parte VI</th><th><a href="../img/cartilha/cartilha-06-spam.pdf" target="_blanktitle=">Spam</a></th></tr>
-                                <tr><th>Parte VII</th><th><a href="../img/cartilha/cartilha-07-incidentes.pdf" target="_blanktitle=">Incidentes de Segurança e Uso Abusivo da Rede</a></th></tr>
-                                <tr><th>Parte VIII</th><th><a href="../img/cartilha/cartilha-08-malware.pdf" target="_blanktitle=">Códigos Maliciosos (Malware)</a></th></tr>
-                                <tr><th></th><th><a href="../img/cartilha/cartilha-glossario.pdf" target="_blanktitle=">Glossário</a></th></tr>
-                                <tr><th></th><th><a href="../img/cartilha/cartilha-folheto-a4.pdf" target="_blanktitle=">Dicas de Segurança</a></th></tr>
-                            </table>
-                        </session>
-                        <session>
-                            <hr/>
                             <table class="tbSolicitacao">
-                                <tr>
-                                    <td class="subTituloSti" colspan="5" id="cRealRef">Chamados Realizados</td></tr>
                                     <tr>
                                         <td>Nome do Usuário</td>
                                         <td>Data da Solicitação</td>                                        
                                         <td>Status</td>
                                     </tr>
                             <?php 
-                                for($i=0; $i < 5; $i++){
+                                for($i=0; $i < sizeof($lista); $i++){
                                     $chamadoSti = $lista[$i];
                                  ?>                            
                                     <tr>

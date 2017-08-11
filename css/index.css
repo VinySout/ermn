@@ -180,7 +180,7 @@ footer{
 }
 .main-titulo{
     padding: 0 20px;
-    width: 22.32%;
+    width: 25%;
     height: auto;
 }
 .main-titulo ul{
@@ -198,12 +198,10 @@ footer{
 }
 .main-titulo-2{
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     color: #0e4097;
-    border-top: 4px #0e4097 solid;
-    border-bottom: 1px #0e4097 solid;
+    border-top: 1px #0e4097 solid;
     background: #e0ebeb;
     text-align: center;
     padding-top: 5px;
@@ -273,4 +271,28 @@ footer{
 }
 .btn-link{
     float: right;
+}
+
+.mainmenu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.mainmenu li:hover .submenu {
+    display: block;
+    max-height: 800px;
+}
+
+.submenu a:hover {
+  background-color: #666;
+  color: #fff;
+  
+}
+
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -moz-transition: all 4.5s linear;
+/*  -webkit-transition: all 4.5s ease-out;*/
 }

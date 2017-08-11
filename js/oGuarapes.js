@@ -6,7 +6,6 @@ var loadData = function(){
         type:"POST",
         url:"../repository/guarapesRepository.php"
     }).done(function(data){
-        console.log(data);
         var  edc = JSON.parse(data);
         for(var i in edc){
             $("#content").append(edc[i].imagem+" "+edc[i].pdf+" "+edc[i].edicao+'</br>');

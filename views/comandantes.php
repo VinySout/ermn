@@ -3,12 +3,25 @@
 session_start();
  header('Content-Type: text/html; charset=utf-8',true);
 
-include_once '../entity/Comandante.class.php';
-include_once '../util/ConexaoDeInclusao.class.php';
-include_once '../repository/ComandanteRepository.class.php';
+    include_once '../entity/Comandante.class.php';
+    include_once '../entity/Cardapio.class.php';
+    include_once '../entity/PlanoDia.class.php'; 
+    include_once '../util/ConexaoDeInclusao.class.php';
+    include_once '../repository/PlanoDiaRepository.class.php';
+    include_once '../repository/CardapioRepository.class.php';
+    include_once '../repository/ComandanteRepository.class.php';
+
     $conexao = new ConexaoDeInclusao();
     $comandanteRepository = new ComandanteRepository($conexao);
     $lista = $comandanteRepository->listarComandantes();
+    
+    $planoDiaRepository = new PlanoDiaRepository($conexao);
+    $pdList = $planoDiaRepository->listarPlanoDia();
+    $ultimoPd = $pdList[0];
+
+    $cardapioRepository = new CardapioRepository($conexao);
+    $cardapioList = $cardapioRepository->listarCardapio();
+    $ultimoCardapio = $cardapioList[0];
 
 ?>
 <html lang="pt-br">

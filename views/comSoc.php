@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <?php 
-session_start();
+    session_start();
+    header('Content-Type: text/html; charset=utf-8',true);
+
+    include_once '../util/ConexaoDeInclusao.class.php';
+    include_once '../entity/Cardapio.class.php';
+    include_once '../entity/PlanoDia.class.php'; 
+    include_once '../repository/PlanoDiaRepository.class.php';
+    include_once '../repository/CardapioRepository.class.php';
+    
+    $conexao = new ConexaoDeInclusao();
+    $planoDiaRepository = new PlanoDiaRepository($conexao);
+    $pdList = $planoDiaRepository->listarPlanoDia();
+    $ultimoPd = $pdList[0];
+
+    $cardapioRepository = new CardapioRepository($conexao);
+    $cardapioList = $cardapioRepository->listarCardapio();
+    $ultimoCardapio = $cardapioList[0];
 
 ?>
 <html lang="pt-br">
@@ -26,20 +42,11 @@ session_start();
                     ?>
                     <div class="col-md-9 ">                        
                         <table>
-                            <tr><p class="styleTitulo" id="comSocRef">Comunicação Social</p></tr>                           
-                            <tr>
-                                <td class="tbSubTitle"><a href="#">Destaques do Semestre</a></td>
-                                <td class="tbSubTitle"><a href="oGuarapes.php#comSocRef">Informativos</a></td>                               
-                                <td class="tbSubTitle"><a href="#">Notícias</a></td>
-                                <td class="tbSubTitle"><a href="#">Contato</a></td>                                                              
-                            </tr>
-                        </table>                          
+                            <tr><p class="styleTitulo" id="comSocRef">Notícias</p></tr>
+                        </table>                            
                         <session>
-                            <hr/>
-                        </session>
-                            
-                        <session>
-                            <hr/>                           
+                            <hr/>  
+                            <span id="contatoRef">Fale conosco pelo e-mail: marques.barreto@marinha.mil.br</span>
                         </session>  
                     </div>
                 </div>

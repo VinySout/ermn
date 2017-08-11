@@ -1,10 +1,9 @@
 <?php
- header('Content-Type: text/html; charset=utf-8',true);
 class ConexaoDeInclusao {
     
     private $host = "localhost";
     private $usuario = "root";
-    private $senha = "";
+    private $senha = "sabotagem";
     private $banco = "intranetermn";
     private $mysqli;   
     

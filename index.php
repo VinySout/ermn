@@ -1,6 +1,23 @@
 <!DOCTYPE html>
-<?php 
-    session_start();
+<?php
+session_start();
+    header('Content-Type: text/html; charset=utf-8',true);
+
+    include_once 'entity/Cardapio.class.php';
+    include_once 'entity/PlanoDia.class.php';
+    include_once 'util/ConexaoDeInclusao.class.php';
+    include_once 'repository/PlanoDiaRepository.class.php';
+    include_once 'repository/CardapioRepository.class.php';
+    
+        $conexao = new ConexaoDeInclusao();
+        $planoDiaRepository = new PlanoDiaRepository($conexao);
+        $lista = $planoDiaRepository->listarPlanoDia();
+        $ultimo = $lista[0];
+        
+        $cardapioRepository = new CardapioRepository($conexao);
+        $cardapioList = $cardapioRepository->listarCardapio();
+        $ultimoCardapio = $cardapioList[0];
+
 ?>
 <html>
     <head lang="pt-br">
@@ -22,9 +39,9 @@
     
         <!-- Barra site Brasil.gov -->
         
-<!--            <div id="barra-brasil"></div>
+            <div id="barra-brasil"></div>
             <script src="http://barra.brasil.gov.br/barra.js" type="text/javascript" defer async></script>
-            -->
+            
         <!-- Fim da Barra Brasil.gov -->
         
         
@@ -114,7 +131,7 @@
                             <a href="http://bono.dctim.mb/wps/portal" target="_blanktitle=" >Web Bono</a>                                      
                         </li>
                         <li class="lst-item">
-                            <a href="http://mensageiro.ctim.mb/sparkweb/index.html" target="_blank=" >Spark Web</a>                                      
+                            <a href="http://www.dpmm.mb/?q=node/97" target="_blanktitle=">SisBol-Web</a>
                         </li>
                         <li class="last last-itm">
                             <a href="https://catalogo2.dadm.mb:8443/novocat/" target="_blanktitle=" >Catálogo MB</a>   
@@ -123,18 +140,16 @@
                     </div>
                     <div class="btn-group linksBarraHeader2">
                         <button type="button" class="btn btn-primary btnLinks" data-toggle="dropdown" aria-expanded="false">
-                        Outros
+                        Links Úteis
                         <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="http://netuno.dadm.mb/" target="_blanktitle=">Programa Netuno</a></li>
-                          <li><a href="http://www.dpmm.mb/?q=node/97" target="_blanktitle=">SisBol-Web</a></li>
-                          <li><a href="http://www.ccsm.mb" target="_blanktitle=">CCSM</a></li>
-                          <li><a href="http://www.densm.mb" target="_blanktitle=">DENSM</a></li>                          
-                          <li><a href="http://www.gcm.mb" target="_blanktitle=">GCM</a></li>
-                          <li><a href="http://internet.ctim.mb/score/login.php" target="_blanktitle=">Score 1.3</a></li>
-                          <li><a href="https://www.compartilhamentodearquivos.mar.mil.br/login.php" target="_blanktitle=">Compartilhamento de Arquivos na MB</a></li>
+                          <li><a href="http://www.comprasgovernamentais.gov.br/" target="_blank">Compras Net</a></li>
+                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>                                                     
+                          <li><a href="http://www.densm.mb" target="_blank">Diretoria de Ensino da Marinha</a></li>                          
+                          <li><a href="http://www.gcm.mb" target="_blank">Gabinete do Comandante da Marinha</a></li> 
+                          <li><a href="http://www.ccsm.mb" target="_blank">Centro de Comunicação Social da Marinha</a></li>
+                                                     
                         </ul>
                     </div>
                 </nav> 
@@ -147,25 +162,103 @@
             
             <div class="links">
                     <div class="col-md-2 main-titulo">
-                        <div class="main-titulo-2">Institucional</div>
-                            <ul class=" nav">
-                                <li class=" main-titulo-link"><a href="views/comandantes.php#comandantesRef">Comandantes</a></li>
-                                <li class=" main-titulo-link"><a href="views/heraldica.php#heraldicaRef">Heráldica</a></li>
-                                <li class=" main-titulo-link"><a href="views/historia.php#historiaRef">História</a></li>                                
-                                <li class=" main-titulo-link"><a href="views/missao.php#missaoRef" >Missão</a></li>                                
-                                <li class=" main-titulo-link"><a href="views/organograma.php#organogramaRef">Organograma</a></li>
+                        <nav class="navigation">
+                            <ul class="nav mainmenu">
+                                <li>
+                                    <div class="main-titulo-2">
+                                        Institucional
+                                        <span class="caret"></span>
+                                    </div>                                    
+                                    <ul class="submenu">
+                                        <li class=" main-titulo-link"><a href="views/comandantes.php#comandantesRef">Comandantes</a></li>
+                                        <li class=" main-titulo-link"><a href="views/heraldica.php#heraldicaRef">Heráldica</a></li>
+                                        <li class=" main-titulo-link"><a href="views/historia.php#historiaRef">História</a></li>                                
+                                        <li class=" main-titulo-link"><a href="views/missao.php#missaoRef" >Missão</a></li>                                
+                                        <li class=" main-titulo-link"><a href="views/organograma.php#organogramaRef">Organograma</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="main-titulo-2">
+                                        Comunicação Social
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="submenu">
+                                        <li class="main-titulo-link"><a href="views/comSoc.php#comSocRef">Notícias</a></li>
+                                        <li class="main-titulo-link"><a href="views/oGuarapes.php#informativoRef">Informativos</a></li>
+                                        <li class="main-titulo-link"><a href="#">Destaques do semestre</a></li>                                        
+                                        <li class="main-titulo-link"><a href="views/comSoc.php#contatoRef">Contato</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="main-titulo-2">
+                                        Gestão Ambiental
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="submenu">
+                                        <li class="main-titulo-link"><a href="img/zips/OI1006B.zip">10-06B Sistema de Gestão Ambiental da ERMN - 2017</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="main-titulo-2">Programa Netuno<span class="caret"></span></div>
+                                    <ul class="submenu">
+                                        <li class="main-titulo-link"><a href="#">Planejamento Estratégico Organizacional</a></li>
+                                        <li class="main-titulo-link"><a href="#">Cartas de Serviços</a></li>
+                                        <li class="main-titulo-link"><a href="#">Gestão de Riscos</a></li>
+                                        <li class="main-titulo-link"><a href="#">Indicadores de Desenpenhos</a></li>
+                                        <li class="main-titulo-link"><a href="#">Planos de Melhoria da Gestão</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="main-titulo-2">
+                                        <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
+                                        echo '<a href="usoInterno/seCom.php#">';
+                                            }?>
+                                        Secretaria de Comunicação
+                                        <?php echo '</a>'; ?>
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="submenu">                                        
+                                        <li class="main-titulo-link"><a href="img/trigramas.pdf" target="_blank">Lista de Trigramas para redução de textos de mensagens</a></li>
+                                        <li class="main-titulo-link"><a href="img/pdfs/correio.pdf" target="_blank">Relação das Caixas Lotus Notes</a></li>
+                                        <li class="main-titulo-link"><a href="usoInterno/arquivos/<?= $ultimo->getNome() ?>" target="_blank">Plano do Dia</a></li>
+                                        <li class="main-titulo-link"><a href="usoInterno/arquivos/<?= $ultimoCardapio->getNome() ?>" target="_blank">Cardápio Semanal</a></li>
+                                        <li class="main-titulo-link"><a href="img/telErmn.pdf" target="_blank">Telefones ERMN</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="main-titulo-2">
+                                        Seção de TI
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="submenu">
+                                        <li class="main-titulo-link"><a href="img/cartilha/cartilha-seguranca-internet.pdf" target="_blank">Cartilha de Segurança para Internet</a></li>
+                                        <li class="main-titulo-link"><a href="usoInterno/abrirChamadoSti.php#stiRef">Realizar Chamado</a></li>
+                                        <li class="main-titulo-link"><a href="views/sti.php#stiRef">Chamados Realizados</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="main-titulo-2">
+                                        Sistemas
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="submenu">
+                                        <li class="main-titulo-link"><a href="https://ermn3.ermn.mb/ermnat/aplica/sigdem20/ermnat.nsf" target="_blank">SIGDEM 2.0</a></li>
+                                        <li class="main-titulo-link"><a href="http://clti-com3dn1.intranet.mb/webmailredirect.nsf" target="_blank">CORREIO</a></li>
+                                        <li class="main-titulo-link"><a href="http://mensageiro.ctim.mb/sparkweb/index.html" target="_blank" >SPARK WEB</a></li>
+                                        <li class="main-titulo-link"><a href="https://www.aplicacoes.dpmm.mb/seguranca/login.asp" target="_blank">BDPES</a></li>
+                                        <li class="main-titulo-link"><a href="http://www.quaestor.mb/" target="_blank">QUAESTOR</a></li>
+                                        <li class="main-titulo-link"><a href="http://www.singra.dabm.mb:7778/prod/dyn_index.show" target="_blank">SINGRA WEB</a></li>
+                                        <li class="main-titulo-link"><a href="http://www.dgom.mb/siplad/siplad.htm" target="_blank">SIPLAD</a></li>
+                                        <li class="main-titulo-link"><a href="https://www.compartilhamentodearquivos.mar.mil.br/login.php" target="_blank">COMPARTILHAMENTO DE ARQUIVOS NA MB</a></li>
+                                        <li class="main-titulo-link"><a href="http://internet.ctim.mb/score/login.php" target="_blank">SCORE 1.3</a></li>
+                                        <li class="main-titulo-link"><a href="https://acesso.serpro.gov.br/HOD10/jsp/logonID.jsp" target="_blank">ACESSO SERPRO (SIAFI)</a></li>
+                                        <li class="main-titulo-link"><a href="https://siafi.tesouro.gov.br/senha/public/pages/security/login.jsf" target="_blank">SIAFI</a></li>
+                                        <li class="main-titulo-link"><a href="https://tesourogerencial.tesouro.gov.br/servlet/mstrWeb?pg=login" target="_blank">TESOURO GERENCIAL</a></li>
+                                        <li class="main-titulo-link"><a href="http://www.safin.mb/" target="_blank">SAFIN</a></li>
+                                    </ul>
+                                </li>
                             </ul>
-                        <div class="main-titulo-2">Departamentos</div>
-                            <ul class=" nav">
-                                <li class="main-titulo-link"><a href="views/comSoc.php#comSocRef">ComSoc</a></li>
-                                <li class="main-titulo-link"><a href="views/meioAmbiente.php#mAmbienteRef">Gestão Ambiental</a></li>
-                                <li class="main-titulo-link"><a href="views/gestoria.php#gestoriaRef">Gestoria</a></li>
-                                <li class="main-titulo-link"><a href="views/pessoal.php#pessoalRef">Pessoal</a></li>
-                                <li class="main-titulo-link"><a href="views/profesp.php#profespRef">Profesp</a></li>
-                                <li class="main-titulo-link"><a href="views/netuno.php#netunoRef">Programa Netuno</a></li>                                
-                                <li class="main-titulo-link"><a href="views/seCom.php#seComRef">SeCom</a></li> 
-                                <li class="main-titulo-link"><a href="views/sti.php#stiRef">Seção de TI</a></li> 
-                            </ul>
+                        </nav>                        
                         <!-- Seção de Login -->
                         <form action="util/valida.php" method="POST">                            
                             <div class="main-titulo-2">Login</div>
@@ -186,7 +279,7 @@
                     </div>
                     <div class="col-md-9">
                         <ul class="diaporama1">
-                            <li><img src="img/galerie/u1.jpg" alt="Entrada da ERMN" title="Entrada da ERMN" /></li>
+                            <li><a href="#"><img src="img/galerie/u1.jpg" alt="Entrada da ERMN" title="Entrada da ERMN" /></a></li>
                             <li><img src="img/galerie/u2.jpg" alt="Antena 'MODELO'" title="Antena 'MODELO'"/></li>
                             <li><img src="img/galerie/u3.jpg" alt="Lema da ERMN" title="Lema da ERMN" /></li>
                             <li><img src="img/galerie/u4.jpg" alt="Tipulação Atual" title="Tipulação Atual"/></li>
