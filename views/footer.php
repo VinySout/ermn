@@ -13,7 +13,7 @@
                     Tel.: (84) 3643-1151 Retelma: 8350-2403<br/>
                     *Fundada em 15 de maio de 1986<br/>
                     Copyleft <span class="copyleft">&copy;</span> 2017<br/><br/>
-                    Criado por: CB-RM2-TE SOUTO
+                    Criado por: CB (RM2-TE) SOUTO
                 </p>
                 </div>
             </div>

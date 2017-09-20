@@ -15,7 +15,7 @@
                                     <div class="main-titulo-2">Comunicação Social<span class="caret"></span></div>
                                     <ul class="submenu">
                                         <li class="main-titulo-link"><a href="oGuarapes.php#informativoRef">Informativos</a></li>
-                                        <li class="main-titulo-link"><a href="#">Destaques do semestre</a></li>
+                                        <li class="main-titulo-link"><a href="comSoc.php#destaqueRef">Destaques do semestre</a></li>
                                         <li class="main-titulo-link"><a href="comSoc.php#comSocRef">Notícias</a></li>
                                         <li class="main-titulo-link"><a href="comSoc.php#contatoRef">Contato</a></li>
                                     </ul>
@@ -29,11 +29,11 @@
                                 <li>
                                     <div class="main-titulo-2">Programa Netuno<span class="caret"></span></div>
                                     <ul class="submenu">
-                                        <li class="main-titulo-link"><a href="#">Planejamento Estratégico Organizacional</a></li>
-                                        <li class="main-titulo-link"><a href="#">Cartas de Serviços</a></li>
-                                        <li class="main-titulo-link"><a href="#">Gestão de Riscos</a></li>
+                                        <li class="main-titulo-link"><a href="../img/pdfs/Planejamento Estrategico Organizacional-da ERMN 2012-2016.odt.ass">Planejamento Estratégico Organizacional</a></li>
+                                        <li class="main-titulo-link"><a href="../img/pdfs/Carta-de-Servico-ERMN-2016.pdf" target="_blank">Carta de Serviços</a></li>
+                                        <li class="main-titulo-link"><a href="../img/zips/Gestao-de-Riscos.zip">Gestão de Riscos</a></li>
                                         <li class="main-titulo-link"><a href="#">Indicadores de Desenpenhos</a></li>
-                                        <li class="main-titulo-link"><a href="#">Planos de Melhoria da Gestão</a></li>
+                                        <li class="main-titulo-link"><a href="../img/pdfs/OF36-Anx-PlanoDaMelhoriaDaGestao-2016_2017.odt.ass">Planos de Melhoria da Gestão</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -51,6 +51,7 @@
                                         <li class="main-titulo-link"><a href="../usoInterno/arquivos/<?= $ultimoPd->getNome()?>" target="_blank">Plano do Dia</a></li>
                                         <li class="main-titulo-link"><a href="../usoInterno/arquivos/<?= $ultimoCardapio->getNome()?>" target="_blank">Cardápio Semanal</a></li>
                                         <li class="main-titulo-link"><a href="../img/telErmn.pdf" target="_blank">Telefones ERMN</a></li>
+                                        <li class="main-titulo-link"><a href="../img/zips/<?= $ultimoNdnr->getNome() ?>">Tráfego TB/NDNR</a></li>
                                     </ul>
                                 </li>
                                 <li>

@@ -6,10 +6,12 @@ session_start();
     include_once '../entity/Comandante.class.php';
     include_once '../entity/Cardapio.class.php';
     include_once '../entity/PlanoDia.class.php'; 
+    include_once '../entity/Ndnr.class.php';
     include_once '../util/ConexaoDeInclusao.class.php';
     include_once '../repository/PlanoDiaRepository.class.php';
     include_once '../repository/CardapioRepository.class.php';
     include_once '../repository/ComandanteRepository.class.php';
+    include_once '../repository/NdnrRepository.class.php';
 
     $conexao = new ConexaoDeInclusao();
     $comandanteRepository = new ComandanteRepository($conexao);
@@ -23,6 +25,9 @@ session_start();
     $cardapioList = $cardapioRepository->listarCardapio();
     $ultimoCardapio = $cardapioList[0];
 
+    $ndnrRepository = new NdnrRepository($conexao);
+    $ndnrList = $ndnrRepository->listarNdnr();
+    $ultimoNdnr = $ndnrList[0];
 ?>
 <html lang="pt-br">
     <head>

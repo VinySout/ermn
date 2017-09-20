@@ -1,5 +1,5 @@
 <?php
-$connection = new \mysqli("localhost", "root", "", "intranetermn");
+$connection = new \mysqli("localhost", "root", "sabotagem", "intranetermn");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST['nome']) && isset($_POST['usuario'])){

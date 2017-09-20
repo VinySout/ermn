@@ -2,7 +2,7 @@
 
 
 $id = $_GET['id'];
-$connection = new \mysqli("localhost", "root", "", "intranetermn");
+$connection = new \mysqli("localhost", "root", "sabotagem", "intranetermn");
     $stmt = $connection->prepare("DELETE FROM chamadosti WHERE id=?");
     $stmt->bind_param("i", $id);
     $stmt->execute();

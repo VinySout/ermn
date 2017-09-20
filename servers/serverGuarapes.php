@@ -14,8 +14,7 @@ if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
                 
                 $uploadfile = $_FILES['imagem']['name'];
                 $uploadfile2 = $_FILES['pdf']['name'];
-                
-                
+                                
                 $ext = strtolower(strrchr($uploadfile,"."));
                 $ext2 = strtolower(strrchr($uploadfile2, "."));
                 

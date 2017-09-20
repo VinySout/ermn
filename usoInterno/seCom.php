@@ -7,9 +7,11 @@ if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
 
     include_once '../entity/Cardapio.class.php';
     include_once '../entity/PlanoDia.class.php';
+    include_once '../entity/Ndnr.class.php';
     include_once '../util/ConexaoDeInclusao.class.php';
     include_once '../repository/PlanoDiaRepository.class.php';
     include_once '../repository/CardapioRepository.class.php';
+    include_once '../repository/NdnrRepository.class.php';
     
     $conexao = new ConexaoDeInclusao();
     $planoDiaRepository = new PlanoDiaRepository($conexao);
@@ -19,6 +21,10 @@ if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
     $cardapioRepository = new CardapioRepository($conexao);
     $cardapioList = $cardapioRepository->listarCardapio();
     $ultimoCardapio = $cardapioList[0];
+    
+    $ndnrRepository = new NdnrRepository($conexao);
+    $ndnrList = $ndnrRepository->listarNdnr();
+    $ultimoNdnr = $ndnrList[0];
 ?>
 <html lang="pt-br">
     <head>
@@ -72,6 +78,26 @@ if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
                                     </tr>
                                     <tr>
                                         <td><input type="file" id="cardapio" class="btn" name="cardapio"/></td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="submit" class="btn btn-xs btn-primary" value="inserir"/>
+                                            <input type="reset" class="btn btn-xs btn-default" value="cancelar">
+                                        </td>
+                                    </tr>
+                                        
+                                </table>
+                            </form>
+                        </session>
+                         <session>
+                            <hr/>
+                            <form action="../servers/serverNdnr.php" method="POST" enctype="multipart/form-data">
+                                <table>
+                                    <tr>
+                                        <td><label for="ndnr">Tráfego TB/NDNR:</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="file" id="ndnr" class="btn" name="ndnr"/></td>                                        
                                     </tr>
                                     <tr>
                                         <td>

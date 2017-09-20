@@ -5,9 +5,11 @@ session_start();
 
     include_once 'entity/Cardapio.class.php';
     include_once 'entity/PlanoDia.class.php';
+    include_once 'entity/Ndnr.class.php';
     include_once 'util/ConexaoDeInclusao.class.php';
     include_once 'repository/PlanoDiaRepository.class.php';
     include_once 'repository/CardapioRepository.class.php';
+    include_once 'repository/NdnrRepository.class.php';
     
         $conexao = new ConexaoDeInclusao();
         $planoDiaRepository = new PlanoDiaRepository($conexao);
@@ -17,6 +19,10 @@ session_start();
         $cardapioRepository = new CardapioRepository($conexao);
         $cardapioList = $cardapioRepository->listarCardapio();
         $ultimoCardapio = $cardapioList[0];
+        
+        $ndnrRepository = new NdnrRepository($conexao);
+        $ndnrList = $ndnrRepository->listarNdnr();
+        $ultimoNdnr = $ndnrList[0];
 
 ?>
 <html>
@@ -185,7 +191,7 @@ session_start();
                                     <ul class="submenu">
                                         <li class="main-titulo-link"><a href="views/comSoc.php#comSocRef">Notícias</a></li>
                                         <li class="main-titulo-link"><a href="views/oGuarapes.php#informativoRef">Informativos</a></li>
-                                        <li class="main-titulo-link"><a href="#">Destaques do semestre</a></li>                                        
+                                        <li class="main-titulo-link"><a href="views/comSoc.php#destaqueRef">Destaques do semestre</a></li>                                        
                                         <li class="main-titulo-link"><a href="views/comSoc.php#contatoRef">Contato</a></li>
                                     </ul>
                                 </li>
@@ -201,11 +207,11 @@ session_start();
                                 <li>
                                     <div class="main-titulo-2">Programa Netuno<span class="caret"></span></div>
                                     <ul class="submenu">
-                                        <li class="main-titulo-link"><a href="#">Planejamento Estratégico Organizacional</a></li>
-                                        <li class="main-titulo-link"><a href="#">Cartas de Serviços</a></li>
-                                        <li class="main-titulo-link"><a href="#">Gestão de Riscos</a></li>
+                                        <li class="main-titulo-link"><a href="./img/pdfs/Planejamento Estrategico Organizacional-da ERMN 2012-2016.odt.ass">Planejamento Estratégico Organizacional</a></li>
+                                        <li class="main-titulo-link"><a href="./img/pdfs/Carta-de-Servico-ERMN-2016.pdf" target="_blank">Carta de Serviços</a></li>
+                                        <li class="main-titulo-link"><a href="./img/zips/Gestao-de-Riscos.zip">Gestão de Riscos</a></li>
                                         <li class="main-titulo-link"><a href="#">Indicadores de Desenpenhos</a></li>
-                                        <li class="main-titulo-link"><a href="#">Planos de Melhoria da Gestão</a></li>
+                                        <li class="main-titulo-link"><a href="./img/pdfs/OF36-Anx-PlanoDaMelhoriaDaGestao-2016_2017.odt.ass">Planos de Melhoria da Gestão</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -223,6 +229,7 @@ session_start();
                                         <li class="main-titulo-link"><a href="usoInterno/arquivos/<?= $ultimo->getNome() ?>" target="_blank">Plano do Dia</a></li>
                                         <li class="main-titulo-link"><a href="usoInterno/arquivos/<?= $ultimoCardapio->getNome() ?>" target="_blank">Cardápio Semanal</a></li>
                                         <li class="main-titulo-link"><a href="img/telErmn.pdf" target="_blank">Telefones ERMN</a></li>
+                                        <li class="main-titulo-link"><a href="img/zips/<?= $ultimoNdnr->getNome() ?>">Tráfego TB/NDNR</a></li>
                                     </ul>
                                 </li>
                                 <li>

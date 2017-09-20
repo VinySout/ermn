@@ -9,6 +9,8 @@ if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
     include_once '../entity/Cardapio.class.php';
     include_once '../entity/PlanoDia.class.php';
     include_once '../util/ConexaoDeInclusao.class.php';
+    include_once '../entity/Ndnr.class.php';
+    include_once '../repository/NdnrRepository.class.php';
     include_once '../repository/ComandanteRepository.class.php';
     include_once '../application/ComandanteService.class.php';
     include_once '../repository/PlanoDiaRepository.class.php';
@@ -24,6 +26,10 @@ if(isset($_SESSION['usuarioID']) && isset($_SESSION['usuarioNome'])){
     $cardapioRepository = new CardapioRepository($conexao);
     $cardapioList = $cardapioRepository->listarCardapio();
     $ultimoCardapio = $cardapioList[0];
+    
+    $ndnrRepository = new NdnrRepository($conexao);
+    $ndnrList = $ndnrRepository->listarNdnr();
+    $ultimoNdnr = $ndnrList[0];
     
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
     if(isset($_GET['id'])){        
