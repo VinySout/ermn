@@ -6,10 +6,12 @@ session_start();
     include_once 'entity/Cardapio.class.php';
     include_once 'entity/PlanoDia.class.php';
     include_once 'entity/Ndnr.class.php';
+    include_once 'entity/IndDesemp.class.php';
     include_once 'util/ConexaoDeInclusao.class.php';
     include_once 'repository/PlanoDiaRepository.class.php';
     include_once 'repository/CardapioRepository.class.php';
     include_once 'repository/NdnrRepository.class.php';
+    include_once 'repository/IndDesempRepository.class.php';
     
         $conexao = new ConexaoDeInclusao();
         $planoDiaRepository = new PlanoDiaRepository($conexao);
@@ -23,7 +25,10 @@ session_start();
         $ndnrRepository = new NdnrRepository($conexao);
         $ndnrList = $ndnrRepository->listarNdnr();
         $ultimoNdnr = $ndnrList[0];
-
+        
+        $indDesempRepository = new IndDesempRepository($conexao);
+        $indDesempList = $indDesempRepository->listarIndDesemp();
+        $ultimoIndDesemp = $indDesempList[0];
 ?>
 <html>
     <head lang="pt-br">
@@ -189,7 +194,7 @@ session_start();
                                         <span class="caret"></span>
                                     </div>
                                     <ul class="submenu">
-                                        <li class="main-titulo-link"><a href="views/comSoc.php#comSocRef">Notícias</a></li>
+<!--                                        <li class="main-titulo-link"><a href="views/comSoc.php#comSocRef">Notícias</a></li>-->
                                         <li class="main-titulo-link"><a href="views/oGuarapes.php#informativoRef">Informativos</a></li>
                                         <li class="main-titulo-link"><a href="views/comSoc.php#destaqueRef">Destaques do semestre</a></li>                                        
                                         <li class="main-titulo-link"><a href="views/comSoc.php#contatoRef">Contato</a></li>
@@ -205,12 +210,19 @@ session_start();
                                     </ul>
                                 </li>
                                 <li>
-                                    <div class="main-titulo-2">Programa Netuno<span class="caret"></span></div>
+                                    <div class="main-titulo-2">
+                                        <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
+                                        echo '<a href="usoInterno/progNetuno.php#progNetunoRef">';
+                                            }?>
+                                        Programa Netuno
+                                        <span class="caret"></span>
+                                        <?php echo '</a>'; ?>                                        
+                                    </div>
                                     <ul class="submenu">
                                         <li class="main-titulo-link"><a href="./img/pdfs/Planejamento Estrategico Organizacional-da ERMN 2012-2016.odt.ass">Planejamento Estratégico Organizacional</a></li>
                                         <li class="main-titulo-link"><a href="./img/pdfs/Carta-de-Servico-ERMN-2016.pdf" target="_blank">Carta de Serviços</a></li>
                                         <li class="main-titulo-link"><a href="./img/zips/Gestao-de-Riscos.zip">Gestão de Riscos</a></li>
-                                        <li class="main-titulo-link"><a href="#">Indicadores de Desenpenhos</a></li>
+                                        <li class="main-titulo-link"><a href="./img/indDesemp/<?= $ultimoIndDesemp->getNome()?>" target="_blank">Indicadores de Desempenhos</a></li>
                                         <li class="main-titulo-link"><a href="./img/pdfs/OF36-Anx-PlanoDaMelhoriaDaGestao-2016_2017.odt.ass">Planos de Melhoria da Gestão</a></li>
                                     </ul>
                                 </li>
@@ -220,8 +232,8 @@ session_start();
                                         echo '<a href="usoInterno/seCom.php#">';
                                             }?>
                                         Secretaria de Comunicação
-                                        <?php echo '</a>'; ?>
                                         <span class="caret"></span>
+                                        <?php echo '</a>'; ?>                                        
                                     </div>
                                     <ul class="submenu">                                        
                                         <li class="main-titulo-link"><a href="img/trigramas.pdf" target="_blank">Lista de Trigramas para redução de textos de mensagens</a></li>
@@ -286,19 +298,19 @@ session_start();
                     </div>
                     <div class="col-md-9">
                         <ul class="diaporama1">
-                            <li><a href="#"><img src="img/galerie/u1.jpg" alt="Entrada da ERMN" title="Entrada da ERMN" /></a></li>
-                            <li><img src="img/galerie/u2.jpg" alt="Antena 'MODELO'" title="Antena 'MODELO'"/></li>
-                            <li><img src="img/galerie/u3.jpg" alt="Lema da ERMN" title="Lema da ERMN" /></li>
-                            <li><img src="img/galerie/u4.jpg" alt="Tipulação Atual" title="Tipulação Atual"/></li>
-                            <li><img src="img/galerie/u5.jpg" alt="Nosso Profesp" title="Nosso Profesp"/></li>
-                            <li><img src="img/galerie/u6.jpg" alt="Visão Aérea da ADM" title="Visão Aérea da ADM"/></li>
+                            <li><a href="#"><img src="img/galerie/u1.jpg" alt="Entrada da ERMN" title="Entrada da ERMN" width="600px" height="320px"/></a></li>
+                            <li><img src="img/galerie/u2.jpg" alt="Antena 'MODELO'" title="Antena 'MODELO'" width="600px" height="320px"/></li>
+                            <li><img src="img/galerie/u3.jpg" alt="Lema da ERMN" title="Lema da ERMN" width="600px" height="320px"/></li>
+                            <li><img src="img/galerie/u4.jpg" alt="Tipulação Atual" title="Tipulação Atual" width="600px" height="320px"/></li>
+                            <li><img src="img/galerie/u5.jpg" alt="Nosso Profesp" title="Nosso Profesp" width="600px" height="320px"/></li>
+                            <li><img src="img/galerie/u6.jpg" alt="Visão Aérea da ADM" title="Visão Aérea da ADM" width="600px" height="320px"/></li>
                             <!--<li><img src="img/galerie/u7.jpg" alt="Alinhando o JS" title="Alinhando o JS"/></li>-->
                         </ul> 
                         <table class="tabelaEmails" id="iNotesSigDemRef">
                             <tr>
                                 <td class="tdEmails">
                                     <a href="http://clti-com3dn1.intranet.mb/webmailredirect.nsf" target="_blank">                                
-                                     <img src="img/iNotes9.png"> </figure> 
+                                        <img src="img/iNotes9.png"/>
                                     </a>
                                 </td>
                                 <td class="tdEmails">
@@ -311,7 +323,7 @@ session_start();
                                 <td class="tdEmails">iNotes</td>
                                 <td class="tdEmails">SiGDEM</td>
                             </tr>
-                    </table> 
+                        </table> 
                     </div>                       
                 </div>
         </section>

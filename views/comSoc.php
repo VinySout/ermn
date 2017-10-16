@@ -8,10 +8,12 @@
     include_once '../entity/PlanoDia.class.php'; 
     include_once '../entity/DestaqueSemestre.class.php';
     include_once '../entity/Ndnr.class.php';
+    include_once '../entity/IndDesemp.class.php';
     include_once '../repository/PlanoDiaRepository.class.php';
     include_once '../repository/CardapioRepository.class.php';
     include_once '../repository/NdnrRepository.class.php';
     include_once '../repository/DestaqueSemestreRepository.class.php';
+    include_once '../repository/IndDesempRepository.class.php';
     
     $conexao = new ConexaoDeInclusao();
     
@@ -30,6 +32,10 @@
     $ndnrRepository = new NdnrRepository($conexao);
     $ndnrList = $ndnrRepository->listarNdnr();
     $ultimoNdnr = $ndnrList[0];
+    
+    $indDesempRepository = new IndDesempRepository($conexao);
+    $indDesempList = $indDesempRepository->listarIndDesemp();
+    $ultimoIndDesemp = $indDesempList[0];
 ?>
 <html lang="pt-br">
     <head>
@@ -69,8 +75,8 @@
                             echo '  <select name="posto">
                                         <option>======Posto======</option>
                                         <option value="Militar Padrão">Militar Padrão</option>
-                                        <option value="Operador padrão PR">Operador padrão PR</option>
-                                        <option value="Operador padrão PMO">Operador padrão PMO</option>                                        
+                                        <option value="Operador Padrão PR">Operador Padrão PR</option>
+                                        <option value="Operador Padrão PMO">Operador Padrão PMO</option>                                        
                                         <option value="Marinheiro Padrão">Marinheiro Padrão</option>
                                     </select>';
                             echo '<input class="form-control" type="text" name="militar" placeholder="graduação/Nome de guerra. Ex: 1º SG-ET Fulano">';

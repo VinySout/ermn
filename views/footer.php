@@ -11,9 +11,9 @@
                 <p>
                     Km 04 da BR-304 - Guarapes - Parnamirim - RN - CEP: 59.146-750<br/>
                     Tel.: (84) 3643-1151 Retelma: 8350-2403<br/>
-                    *Fundada em 15 de maio de 1986<br/>
-                    Copyleft <span class="copyleft">&copy;</span> 2017<br/><br/>
-                    Criado por: CB (RM2-TE) SOUTO
+                    *Fundada em 15 de maio de 1986<br/><br/><br/>
+                    &copy; 2017 Criado por: CB (RM2-TE) SOUTO<br/>
+                    Todos os direitos reservados.
                 </p>
                 </div>
             </div>

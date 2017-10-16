@@ -7,12 +7,14 @@ session_start();
     include_once '../entity/Cardapio.class.php';
     include_once '../entity/PlanoDia.class.php';
     include_once '../entity/Ndnr.class.php';
+    include_once '../entity/IndDesemp.class.php';
     include_once '../util/ConexaoDeInclusao.class.php';
     include_once '../repository/ChamadoStiRepository.class.php';
     include_once '../application/ChamadoStiService.class.php';
     include_once '../repository/PlanoDiaRepository.class.php';
     include_once '../repository/CardapioRepository.class.php';
     include_once '../repository/NdnrRepository.class.php';
+    include_once '../repository/IndDesempRepository.class.php';
 
     $conexao = new ConexaoDeInclusao();
     $chamadoStiService = new ChamadoStiService($conexao); 
@@ -28,6 +30,10 @@ session_start();
     $ndnrRepository = new NdnrRepository($conexao);
     $ndnrList = $ndnrRepository->listarNdnr();
     $ultimoNdnr = $ndnrList[0];
+    
+    $indDesempRepository = new IndDesempRepository($conexao);
+    $indDesempList = $indDesempRepository->listarIndDesemp();
+    $ultimoIndDesemp = $indDesempList[0];
     
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
         if(isset($_GET['id'])){        

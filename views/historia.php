@@ -7,9 +7,11 @@ header('Content-Type: text/html; charset=utf-8',true);
     include_once '../entity/Cardapio.class.php';
     include_once '../entity/PlanoDia.class.php'; 
     include_once '../entity/Ndnr.class.php';
+    include_once '../entity/IndDesemp.class.php';
     include_once '../repository/NdnrRepository.class.php';
     include_once '../repository/PlanoDiaRepository.class.php';
     include_once '../repository/CardapioRepository.class.php';
+    include_once '../repository/IndDesempRepository.class.php';
     
     $conexao = new ConexaoDeInclusao();
     $planoDiaRepository = new PlanoDiaRepository($conexao);
@@ -23,6 +25,10 @@ header('Content-Type: text/html; charset=utf-8',true);
     $ndnrRepository = new NdnrRepository($conexao);
     $ndnrList = $ndnrRepository->listarNdnr();
     $ultimoNdnr = $ndnrList[0];
+    
+    $indDesempRepository = new IndDesempRepository($conexao);
+    $indDesempList = $indDesempRepository->listarIndDesemp();
+    $ultimoIndDesemp = $indDesempList[0];
 ?>
 <html lang="pt-br">
     <head lang=pt-br"">

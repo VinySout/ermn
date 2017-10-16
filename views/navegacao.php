@@ -14,9 +14,9 @@
                                 <li>
                                     <div class="main-titulo-2">Comunicação Social<span class="caret"></span></div>
                                     <ul class="submenu">
+                                        <!-- <li class="main-titulo-link"><a href="comSoc.php#comSocRef">Notícias</a></li>-->
                                         <li class="main-titulo-link"><a href="oGuarapes.php#informativoRef">Informativos</a></li>
                                         <li class="main-titulo-link"><a href="comSoc.php#destaqueRef">Destaques do semestre</a></li>
-                                        <li class="main-titulo-link"><a href="comSoc.php#comSocRef">Notícias</a></li>
                                         <li class="main-titulo-link"><a href="comSoc.php#contatoRef">Contato</a></li>
                                     </ul>
                                 </li>
@@ -27,12 +27,19 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <div class="main-titulo-2">Programa Netuno<span class="caret"></span></div>
+                                    <div class="main-titulo-2">
+                                        <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
+                                        echo '<a href="../usoInterno/progNetuno.php#progNetunoRef">';
+                                            }?>
+                                        Programa Netuno
+                                        <span class="caret"></span>
+                                        <?php echo '</a>'; ?>                                        
+                                    </div>
                                     <ul class="submenu">
                                         <li class="main-titulo-link"><a href="../img/pdfs/Planejamento Estrategico Organizacional-da ERMN 2012-2016.odt.ass">Planejamento Estratégico Organizacional</a></li>
                                         <li class="main-titulo-link"><a href="../img/pdfs/Carta-de-Servico-ERMN-2016.pdf" target="_blank">Carta de Serviços</a></li>
                                         <li class="main-titulo-link"><a href="../img/zips/Gestao-de-Riscos.zip">Gestão de Riscos</a></li>
-                                        <li class="main-titulo-link"><a href="#">Indicadores de Desenpenhos</a></li>
+                                        <li class="main-titulo-link"><a href="../img/indDesemp/<?= $ultimoIndDesemp->getNome() ?>" target="_blank">Indicadores de Desempenhos</a></li>
                                         <li class="main-titulo-link"><a href="../img/pdfs/OF36-Anx-PlanoDaMelhoriaDaGestao-2016_2017.odt.ass">Planos de Melhoria da Gestão</a></li>
                                     </ul>
                                 </li>
@@ -42,8 +49,8 @@
                                         echo '<a href="../usoInterno/seCom.php#">';
                                             }?>
                                         Secretaria de Comunicação
-                                        <?php echo '</a>'; ?>
                                         <span class="caret"></span>
+                                        <?php echo '</a>'; ?>                                        
                                     </div>
                                     <ul class="submenu">
                                         <li class="main-titulo-link"><a href="../img/trigramas.pdf" target="_blank">Lista de Trigramas para redução de textos de mensagens</a></li>
