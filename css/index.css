@@ -293,6 +293,6 @@ footer{
 .submenu {
   overflow: hidden;
   max-height: 0;
-  -moz-transition: all 4.5s linear;
-/*  -webkit-transition: all 4.5s ease-out;*/
+  -moz-transition: all 9.5s linear;
+  -webkit-transition: all 9.5s ease-out;
 }
