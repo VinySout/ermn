@@ -257,9 +257,33 @@ footer{
 }
 
 .tabelaEmails{
-    margin-top: 400px;
-    margin-left: 120px;
+    margin-left: 110px;
 }
+.lineIndex{
+    margin-top: 400px;
+}
+.lineIndex h4{
+    margin-left: 210px;
+}
+.lineIndex a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #737373;
+    font-weight: bold;
+    text-shadow: blue 0.03em 0.03em 0em;
+    -moz-transition: all 1s linear;
+    -webkit-transition: all 1s ease-out;
+}
+.lineIndex a:hover{
+    text-decoration: none;
+    font-size: 22px;
+    color: #5bc0de;
+    font-weight: bold;
+    text-shadow: #67b168 0.03em 0.03em 0em;
+    -moz-transition: all 1s linear;
+    -webkit-transition: all 1s ease-out;
+}
+
 .tdEmails{
     font-family: Arial;
     padding-right: 220px;

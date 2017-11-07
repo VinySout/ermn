@@ -308,14 +308,23 @@ session_start();
                     <div class="col-md-9">
                         <ul class="diaporama1">
                             <li><a href="#"><img src="img/galerie/u1.jpg" alt="Entrada da ERMN" title="Entrada da ERMN" width="600px" height="320px"/></a></li>
-                            <li><img src="img/galerie/u2.jpg" alt="Antena 'MODELO'" title="Frente do prédio do comando" width="600px" height="320px"/></li>
+                            <li><img src="img/galerie/u2.jpg" alt="Frente do prédio do comando" title="Frente do prédio do comando" width="600px" height="320px"/></li>
                             <li><img src="img/galerie/u3.jpg" alt="Lema da ERMN" title="Lema da ERMN" width="600px" height="320px"/></li>
                             <li><img src="img/galerie/u4.jpg" alt="Tipulação Atual" title="Tipulação Atual" width="600px" height="320px"/></li>
                             <li><img src="img/galerie/u5.jpg" alt="Nosso Profesp" title="Nosso Profesp" width="600px" height="320px"/></li>
                             <li><img src="img/galerie/u6.jpg" alt="Visão Aérea da ADM" title="Visão Aérea da ADM" width="600px" height="320px"/></li>
                             <!--<li><img src="img/galerie/u7.jpg" alt="Alinhando o JS" title="Alinhando o JS"/></li>-->
-                        </ul> 
-                        <table class="tabelaEmails" id="iNotesSigDemRef">
+                        </ul>
+                        <ul class="lineIndex">
+                            <li>
+                                <hr/>
+                                <h4><a href="img/zips/<?= $ultimoNdnr->getNome() ?>">Tráfego TB/NDNR</a></h4>
+                            </li>
+                            <li>
+                                <hr/>
+                            </li>
+                        </ul>
+                        <table class="tabelaEmails" id="iNotesSigDemRef">                            
                             <tr>
                                 <td class="tdEmails">
                                     <a href="http://clti-com3dn1.intranet.mb/webmailredirect.nsf" target="_blank">                                
