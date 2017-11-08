@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 01/11/2017 às 17:25
+-- Tempo de geração: 08/11/2017 às 17:02
 -- Versão do servidor: 10.1.26-MariaDB
 -- Versão do PHP: 7.1.8
 
@@ -41,7 +41,8 @@ INSERT INTO `cardapio` (`id`, `nome`) VALUES
 (3, 'cp-1507212585.pdf'),
 (4, 'cp-1508417319.pdf'),
 (5, 'cp-1509537227.pdf'),
-(6, 'cp-1509537405.pdf');
+(6, 'cp-1509537405.pdf'),
+(7, 'cp-1509974792.pdf');
 
 -- --------------------------------------------------------
 
@@ -62,6 +63,14 @@ CREATE TABLE `chamadosti` (
   `substituicao` varchar(20) NOT NULL,
   `itemdesc` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `chamadosti`
+--
+
+INSERT INTO `chamadosti` (`id`, `nome`, `usuario`, `descricao`, `sdata`, `infpc`, `infpc2`, `providenciado`, `solucao`, `substituicao`, `itemdesc`) VALUES
+(1, 'CB-ME Alice', 'ermn-112', 'Computador sem conexÃ£o com a internet.', '06-11-2017', '172.23.40.242', '172.23.40.242', 'ConcluÃ­do', 'Ajustado barramento marrom que estava com problema no cabo de dados.', 'n/c', 'n/c'),
+(2, 'CT Luciano', 'ermn-profesp', 'Computador sem acesso a internet.', '06-11-2017', '172.23.40.107', '172.23.40.107', 'ConcluÃ­do', 'AtualizaÃ§Ã£o de Data e Hora.', 'n/c', 'n/c');
 
 -- --------------------------------------------------------
 
@@ -157,7 +166,15 @@ CREATE TABLE `ndnr` (
 --
 
 INSERT INTO `ndnr` (`id`, `nome`) VALUES
-(1, 'ndnr-1504113554.zip');
+(1, 'ndnr-1504113554.zip'),
+(2, 'ndnr-1509561350.zip'),
+(3, 'ndnr-1509706317.zip'),
+(4, 'ndnr-1509770213.zip'),
+(5, 'ndnr-1509971088'),
+(6, 'ndnr-1509971115.zip'),
+(7, 'ndnr-1510052890.zip'),
+(8, 'ndnr-1510138531'),
+(9, 'ndnr-1510138555.zip');
 
 -- --------------------------------------------------------
 
@@ -185,7 +202,7 @@ INSERT INTO `oguarapes` (`id`, `imagem`, `pdf`, `edicao`) VALUES
 (22, '1492601700.jpg', '1492601700.pdf', '6Âº ediÃ§Ã£o O Guarapes'),
 (26, '1501078544.jpg', '1501078544.pdf', '7Âª EdiÃ§Ã£o Guarapes'),
 (27, '1501078494.jpg', '1501078494.pdf', '8Âª EdiÃ§Ã£o Guarapes'),
-(28, '1509543776.jpg', '1509543776.pdf', '9Âª EdiÃ§Ã£o Guarapes');
+(28, '1510167085.jpg', '1510167085.pdf', '9Âª EdiÃ§Ã£o Guarapes');
 
 -- --------------------------------------------------------
 
@@ -206,7 +223,9 @@ INSERT INTO `planodia` (`id`, `nome`) VALUES
 (19, 'pd-1507210528.pdf'),
 (20, 'pd-1508415756.pdf'),
 (21, 'pd-1508769542.pdf'),
-(22, 'pd-1509536621.pdf');
+(22, 'pd-1509536621.pdf'),
+(23, 'pd-1509974619.pdf'),
+(24, 'pd-1510057800.pdf');
 
 -- --------------------------------------------------------
 
@@ -294,7 +313,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `cardapio`
 --
 ALTER TABLE `cardapio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de tabela `chamadosti`
 --
@@ -319,7 +338,7 @@ ALTER TABLE `inddesemp`
 -- AUTO_INCREMENT de tabela `ndnr`
 --
 ALTER TABLE `ndnr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de tabela `oguarapes`
 --
@@ -329,7 +348,7 @@ ALTER TABLE `oguarapes`
 -- AUTO_INCREMENT de tabela `planodia`
 --
 ALTER TABLE `planodia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
