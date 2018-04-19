@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 08/11/2017 às 17:02
+-- Tempo de geração: 19/04/2018 às 14:36
 -- Versão do servidor: 10.1.26-MariaDB
 -- Versão do PHP: 7.1.8
 
@@ -42,7 +42,11 @@ INSERT INTO `cardapio` (`id`, `nome`) VALUES
 (4, 'cp-1508417319.pdf'),
 (5, 'cp-1509537227.pdf'),
 (6, 'cp-1509537405.pdf'),
-(7, 'cp-1509974792.pdf');
+(7, 'cp-1509974792.pdf'),
+(8, 'cp-1510667586.pdf'),
+(9, 'cp-1515063335.pdf'),
+(10, 'cp-1519040225.pdf'),
+(11, 'cp-1523972704.pdf');
 
 -- --------------------------------------------------------
 
@@ -69,8 +73,9 @@ CREATE TABLE `chamadosti` (
 --
 
 INSERT INTO `chamadosti` (`id`, `nome`, `usuario`, `descricao`, `sdata`, `infpc`, `infpc2`, `providenciado`, `solucao`, `substituicao`, `itemdesc`) VALUES
-(1, 'CB-ME Alice', 'ermn-112', 'Computador sem conexÃ£o com a internet.', '06-11-2017', '172.23.40.242', '172.23.40.242', 'ConcluÃ­do', 'Ajustado barramento marrom que estava com problema no cabo de dados.', 'n/c', 'n/c'),
-(2, 'CT Luciano', 'ermn-profesp', 'Computador sem acesso a internet.', '06-11-2017', '172.23.40.107', '172.23.40.107', 'ConcluÃ­do', 'AtualizaÃ§Ã£o de Data e Hora.', 'n/c', 'n/c');
+(5, '3Â°SG-CN WAGNER', 'PROFESP', 'TransferÃªncia de Antena Virtude mudanÃ§a do laboratÃ³rio de informÃ¡tica do prÃ©dio do PT para o  PrÃ©dio do PROFESP, Solicito mudanÃ§a da antena de Internet da EMBRATEL e verificar a necessidade de materiais para instalaÃ§Ã£o da mesma.', '06-03-2018', '172.23.40.101', '172.23.40.101', 'ConcluÃ­do', 'Infelizmente nÃ£o hÃ¡ possibilidade de executar essa faina por bordo, jÃ¡ que o equipamento Ã© da empresa Embratel. Aconcelho que entre em contato com a mesma, para que prestem o devÃ­do suporte solicitado.', 'N/C', 'N/C'),
+(6, 'teste', 'teste', 'teste', '04-04-2018', '172.23.40.5', '172.23.40.5', 'aguardando', 'aguardando', 'aguardando', 'aguardando'),
+(7, '3SG-ES MAX LUIZ', 'ERMN-111', 'A CPU apresenta problemas de inicializaÃ§Ã£o e &quot;apaga&quot; constantemente.', '16-04-2018', '172.23.40.111', '172.23.40.111', 'aguardando', 'aguardando', 'aguardando', 'aguardando');
 
 -- --------------------------------------------------------
 
@@ -105,7 +110,7 @@ INSERT INTO `comandantes` (`id`, `foto`, `nome`, `periodo`) VALUES
 (44, '1490979109.jpg', 'CC LUIZ ALBERTO FERREIRA VASCONCELLOS', '22/01/2009 a 18/01/2011'),
 (45, '1490979308.jpg', 'CC EDUARDO RABHA TOZZINI', '18/01/2011 a 30/01/2013'),
 (46, '1491959843.jpg', 'CC RENATO VIEIRA MELGAÃ‡O', '30/01/2013 a 19/01/2015'),
-(50, '1491956663.jpg', 'CC RODRIGO DA SILVA RIBEIRO', '19/01/2015 a 27/01/2017'),
+(50, '1520963728.jpg', 'CC RODRIGO DA SILVA RIBEIRO', '19/01/2015 a 27/01/2017'),
 (51, '1492602065.jpg', 'CC RICARDO BITTENCOURT DA SILVA', '27/01/2017');
 
 -- --------------------------------------------------------
@@ -174,7 +179,20 @@ INSERT INTO `ndnr` (`id`, `nome`) VALUES
 (6, 'ndnr-1509971115.zip'),
 (7, 'ndnr-1510052890.zip'),
 (8, 'ndnr-1510138531'),
-(9, 'ndnr-1510138555.zip');
+(9, 'ndnr-1510138555.zip'),
+(10, 'ndnr-1510204243.zip'),
+(11, 'ndnr-1510312880'),
+(12, 'ndnr-1510312965.zip'),
+(13, 'ndnr-1511349069.zip'),
+(14, 'ndnr-1511407914.zip'),
+(15, 'ndnr-1511433833.zip'),
+(16, 'ndnr-1511566402.zip'),
+(17, 'ndnr-1511953847'),
+(18, 'ndnr-1511953886.zip'),
+(19, 'ndnr-1511992776.zip'),
+(20, 'ndnr-1512039613.zip'),
+(21, 'ndnr-1512045087.zip'),
+(22, 'ndnr-1512151584.zip');
 
 -- --------------------------------------------------------
 
@@ -202,7 +220,8 @@ INSERT INTO `oguarapes` (`id`, `imagem`, `pdf`, `edicao`) VALUES
 (22, '1492601700.jpg', '1492601700.pdf', '6Âº ediÃ§Ã£o O Guarapes'),
 (26, '1501078544.jpg', '1501078544.pdf', '7Âª EdiÃ§Ã£o Guarapes'),
 (27, '1501078494.jpg', '1501078494.pdf', '8Âª EdiÃ§Ã£o Guarapes'),
-(28, '1510167085.jpg', '1510167085.pdf', '9Âª EdiÃ§Ã£o Guarapes');
+(28, '1510167085.jpg', '1510167085.pdf', '9Âª EdiÃ§Ã£o Guarapes'),
+(29, '1518697639.jpg', '1518697639.pdf', '10Âª EdiÃ§Ã£o Guarapes');
 
 -- --------------------------------------------------------
 
@@ -225,7 +244,10 @@ INSERT INTO `planodia` (`id`, `nome`) VALUES
 (21, 'pd-1508769542.pdf'),
 (22, 'pd-1509536621.pdf'),
 (23, 'pd-1509974619.pdf'),
-(24, 'pd-1510057800.pdf');
+(24, 'pd-1510057800.pdf'),
+(25, 'pd-1510667835.pdf'),
+(26, 'pd-1515063147.odt'),
+(27, 'pd-1519039829.pdf');
 
 -- --------------------------------------------------------
 
@@ -313,12 +335,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `cardapio`
 --
 ALTER TABLE `cardapio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de tabela `chamadosti`
 --
 ALTER TABLE `chamadosti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de tabela `comandantes`
 --
@@ -338,17 +360,17 @@ ALTER TABLE `inddesemp`
 -- AUTO_INCREMENT de tabela `ndnr`
 --
 ALTER TABLE `ndnr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT de tabela `oguarapes`
 --
 ALTER TABLE `oguarapes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT de tabela `planodia`
 --
 ALTER TABLE `planodia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --

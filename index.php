@@ -139,7 +139,7 @@ session_start();
                             <a href="https://www.marinha.mil.br/saudenaval" target="_blanktitle=" >Saúde Naval</a>                                      
                         </li>
                         <li class="lst-item">
-                            <a href="http://bono.dctim.mb/wps/portal" target="_blanktitle=" >Web Bono</a>                                      
+                            <a href="http://bono.dctim.mb" target="_blanktitle=" >Web Bono</a>                                      
                         </li>
                         <li class="lst-item">
                             <a href="http://www.dpmm.mb/?q=node/97" target="_blanktitle=">SisBol-Web</a>
