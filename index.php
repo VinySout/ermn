@@ -307,7 +307,7 @@ session_start();
                     </div>
                     <div class="col-md-9">
                         <ul class="diaporama1">
-                            <li><img src="img/galerie/u1.1.jpg" alt="Baluarte IX" title="Baluarte IX" width="600px" height="320px"/></li>
+                            <!-- <li><img src="img/galerie/u1.1.jpg" alt="Baluarte IX" title="Baluarte IX" width="600px" height="320px"/></li> -->
                             <li><img src="img/galerie/u1.jpg" alt="Entrada da ERMN" title="Entrada da ERMN" width="600px" height="320px"/></li>
                             <li><img src="img/galerie/u2.jpg" alt="Frente do prédio do comando" title="Frente do prédio do comando" width="600px" height="320px"/></li>
                             <li><img src="img/galerie/u3.jpg" alt="Lema da ERMN" title="Lema da ERMN" width="600px" height="320px"/></li>
