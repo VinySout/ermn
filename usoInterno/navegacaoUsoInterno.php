@@ -10,11 +10,11 @@
                     </div>
                 </a>                                    
                 <ul class="submenu">
-                    <li class=" main-titulo-link"><a href="comandantes.php#comandantesRef">Comandantes</a></li>
-                    <li class=" main-titulo-link"><a href="heraldica.php#heraldicaRef">Heráldica</a></li>
-                    <li class=" main-titulo-link"><a href="historia.php#historiaRef">História</a></li>                                
-                    <li class=" main-titulo-link"><a href="missao.php#missaoRef" >Missão</a></li>                                
-                    <li class=" main-titulo-link"><a href="organograma.php#organogramaRef">Organograma</a></li>
+                    <li class=" main-titulo-link"><a href="../views/comandantes.php#comandantesRef">Comandantes</a></li>
+                    <li class=" main-titulo-link"><a href="../views/heraldica.php#heraldicaRef">Heráldica</a></li>
+                    <li class=" main-titulo-link"><a href="../views/historia.php#historiaRef">História</a></li>                                
+                    <li class=" main-titulo-link"><a href="../views/missao.php#missaoRef" >Missão</a></li>                                
+                    <li class=" main-titulo-link"><a href="../views/organograma.php#organogramaRef">Organograma</a></li>
                 </ul>
             </li>
             <li>
@@ -25,8 +25,8 @@
                     </div>
                 </a>
                 <ul class="submenu">
-                    <li class="main-titulo-link"><a href="oGuarapes.php#informativoRef">Informativos</a></li>
-                    <li class="main-titulo-link"><a href="comSoc.php#destaqueRef">Destaques do semestre</a></li>                                        
+                    <li class="main-titulo-link"><a href="../views/oGuarapes.php#informativoRef">Informativos</a></li>
+                    <li class="main-titulo-link"><a href="../views/comSoc.php#destaqueRef">Destaques do semestre</a></li>                                        
                 </ul>
             </li>
             <li>
@@ -83,7 +83,7 @@
                 </a>
                 <ul class="submenu">
                     <li class="main-titulo-link"><a href="../img/cartilha/cartilha-seguranca-internet.pdf" target="_blank">Cartilha de Segurança para Internet</a></li>
-                    <li class="main-titulo-link"><a href="../usoInterno/abrirChamadoSti.php#stiRef">Realizar Chamado</a></li>
+                    <li class="main-titulo-link"><a href="abrirChamadoSti.php#stiRef">Realizar Chamado</a></li>
                     <li class="main-titulo-link"><a href="../views/sti.php#stiRef">Chamados Realizados</a></li>
                 </ul>
             </li>
@@ -119,8 +119,8 @@
                     </div>
                 </a>
                 <ul class="submenu">
-                <li class="main-titulo-link"><a href="usoInterno/arquivos/<?= $ultimoPd->getNome() ?>" target="_blank">Plano do Dia</a></li>
-                <li class="main-titulo-link"><a href="usoInterno/arquivos/<?= $ultimoCardapio->getNome() ?>" target="_blank">Cardápio Semanal</a></li>
+                <li class="main-titulo-link"><a href="./arquivos/<?= $ultimoPd->getNome() ?>" target="_blank">Plano do Dia</a></li>
+                <li class="main-titulo-link"><a href="./arquivos/<?= $ultimoCardapio->getNome() ?>" target="_blank">Cardápio Semanal</a></li>
                 </ul>
             </li>
         </ul>
