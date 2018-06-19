@@ -4,5 +4,4 @@ $(document).ready(function(){
 		animationSpeed: "slow",
 		delay:10
 	});
-
 });

@@ -1,6 +1,6 @@
 <!-- Css -->
         <link rel="icon" type="image/png" href="../img/brasaoErmn.png">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">        
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />        
         <link rel="stylesheet" href="../css/index.css"/> 
         <link rel="stylesheet" href="../css/estilos.css"/> 
         
@@ -11,3 +11,4 @@
         <script type="text/javascript" src="../js/destaques.js"></script>
         <script type="text/javascript" src="../js/oGuarapes.js"></script>
         <script type="text/javascript" src='../js/bootstrap.min.js'></script>
+        <script type="text/javascript" src='../js/menuLateral.js'></script>
