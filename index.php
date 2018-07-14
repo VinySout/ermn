@@ -158,7 +158,8 @@ session_start();
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="http://www.comprasgovernamentais.gov.br/" target="_blank">Compras Net</a></li>
-                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>                                                     
+                          <li><a href="https://www.marinha.mil.br/content/navega-reserva" target="_blank">Navega Reserva</a></li>
+                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>                          
                           <li><a href="http://www.densm.mb" target="_blank">Diretoria de Ensino da Marinha</a></li>                          
                           <li><a href="http://www.gcm.mb" target="_blank">Gabinete do Comandante da Marinha</a></li> 
                           <li><a href="http://www.ccsm.mb" target="_blank">Centro de Comunicação Social da Marinha</a></li>
@@ -201,7 +202,8 @@ session_start();
                                         </a>
                                         <ul class="submenu">
                                             <li class="main-titulo-link"><a href="views/oGuarapes.php#informativoRef">Informativos</a></li>
-                                            <li class="main-titulo-link"><a href="views/comSoc.php#destaqueRef">Destaques do semestre</a></li>                                        
+                                            <li class="main-titulo-link"><a href="views/comSoc.php#destaqueRef">Destaques do semestre</a></li>
+                                            <li class="main-titulo-link"><a href="views/comSoc.php#contatoRef">Fale Conosco</a></li>  
                                         </ul>
                                     </li>
                                     <li>
@@ -236,7 +238,8 @@ session_start();
                                     <li>
                                         <a href='#' id="btn-menu-lateral">
                                             <div class="main-titulo-2">
-                                                Secretaria de Comunicação                                    
+                                                Secretaria de Comunicação
+                                                <span class="caret"></span>
                                             </div>
                                         </a>
                                         <ul class="submenu">
@@ -298,26 +301,38 @@ session_start();
                                             <li class="main-titulo-link"><a href="usoInterno/arquivos/<?= $ultimoCardapio->getNome() ?>" target="_blank">Cardápio Semanal</a></li>
                                         </ul>
                                     </li>
+                                    <li>
+                                        <a href="#" id="btn-menu-lateral">
+                                            <div class="main-titulo-2">Login
+                                                <span class="caret"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="submenu">
+                                            <!-- Seção de Login -->
+                                                <form action="util/valida.php" method="POST">                                                  
+                                                    <table>                            
+                                                        <tr>
+                                                            <td><input class="form-control" type="text" name="usuario" id="loginRef" placeholder="Usuário"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input class="form-control" type="password" name="senha" id="senha" placeholder="Senha"></td>
+                                                        </tr>
+                                                    </table>                                
+                                                        <input class="btn btn-xs btn-primary bt-entrar" type="submit" value="Entrar">                                                   
+                                                </form>
+                                                <form action="./util/logoff.php" method="POST">                            
+                                                            <input class="btn btn-xs btn-primary bt-sair" type="submit" value="Sair">
+                                                </form>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
-                        </nav>                        
-                        <!-- Seção de Login -->
-                        <form action="util/valida.php" method="POST">                            
-                            <div class="main-titulo-2">Login</div>
-                            <table>                            
-                                <tr>
-                                    <td><input class="form-control" type="text" name="usuario" id="loginRef" placeholder="Usuário"></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-control" type="password" name="senha" id="senha" placeholder="Senha"></td>
-                                </tr>
-                            </table>                                
-                                <input class="btn btn-xs btn-primary bt-entrar" type="submit" value="Entrar">                                                   
-                        </form>
-                        <form action="./util/logoff.php" method="POST">                            
-                                    <input class="btn btn-xs btn-primary bt-sair" type="submit" value="Sair">
-                        </form>
-                            
+                            <div>
+                                <a href="https://www.marinha.mil.br/content/amazonia-azul-1" target="_blank">
+                                    <img alt="Amazônia Azul" src="img/Amazonia-Azul.png" class="img-amazonia-azul">
+                                </a>
+                            </div>
+                        </nav>
                     </div>
                     <div class="col-md-9">
                         <ul class="diaporama1">

@@ -124,6 +124,10 @@ ul{
     height: 35px;
     background: url("../img/lupa.png");
 }
+.img-amazonia-azul{
+    height:91px; 
+    width:193px;
+}
 #main{
     margin-bottom: 20px;
 }

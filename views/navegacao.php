@@ -1,6 +1,6 @@
 <nav class="col-md-2 main-titulo">
     <nav class="navigation">
-    <div id="cssmenu">
+        <div id="cssmenu">
         <ul class="nav mainmenu">
             <li >
                 <a href='#' id="btn-menu-lateral">
@@ -26,7 +26,8 @@
                 </a>
                 <ul class="submenu">
                     <li class="main-titulo-link"><a href="oGuarapes.php#informativoRef">Informativos</a></li>
-                    <li class="main-titulo-link"><a href="comSoc.php#destaqueRef">Destaques do semestre</a></li>                                        
+                    <li class="main-titulo-link"><a href="comSoc.php#destaqueRef">Destaques do semestre</a></li>
+                    <li class="main-titulo-link"><a href="comSoc.php#contatoRef">Fale Conosco</a></li> 
                 </ul>
             </li>
             <li>
@@ -61,7 +62,8 @@
             <li>
                 <a href='#' id="btn-menu-lateral">
                     <div class="main-titulo-2">
-                        Secretaria de Comunicação                                    
+                        Secretaria de Comunicação
+                        <span class="caret"></span>
                     </div>
                 </a>
                 <ul class="submenu">
@@ -123,25 +125,40 @@
                 <li class="main-titulo-link"><a href="usoInterno/arquivos/<?= $ultimoCardapio->getNome() ?>" target="_blank">Cardápio Semanal</a></li>
                 </ul>
             </li>
+            <li>
+                <a href='#' id="btn-menu-lateral">
+                    <div class="main-titulo-2">
+                        Login
+                        <span class="caret"></span>
+                    </div>
+                </a>
+                <ul>
+                    <!-- Seção de Login -->
+                    <form action="../util/valida.php" method="POST">   
+                        <table>                            
+                            <tr>
+                                <td><input class="form-control" type="text" name="usuario" id="loginRef" placeholder="Usuário"></td>
+                            </tr>
+                            <tr>
+                                <td><input class="form-control" type="password" name="senha" id="senha" placeholder="Senha"></td>
+                            </tr>
+                        </table>                                
+                            <input class="btn btn-xs btn-primary bt-entrar" type="submit" value="Entrar">                                                   
+                    </form>
+                    <form action="../util/logoff.php" method="POST">                            
+                                <input class="btn btn-xs btn-primary bt-sair" type="submit" value="Sair">
+                    </form>
+                </ul>
+            </li>
         </ul>
     </div>
+        <div>
+            <a href="https://www.marinha.mil.br/content/amazonia-azul-1" target="_blank">
+                <img alt="Amazônia Azul" src="../img/Amazonia-Azul.png" class="img-amazonia-azul">
+            </a>
+        </div>
     </nav>
     
-    <!-- Seção de Login -->
-    <form action="../util/valida.php" method="POST">                            
-        <div class="main-titulo-2">Login</div>
-        <table>                            
-            <tr>
-                <td><input class="form-control" type="text" name="usuario" id="loginRef" placeholder="Usuário"></td>
-            </tr>
-            <tr>
-                <td><input class="form-control" type="password" name="senha" id="senha" placeholder="Senha"></td>
-            </tr>
-        </table>                                
-            <input class="btn btn-xs btn-primary bt-entrar" type="submit" value="Entrar">                                                   
-    </form>
-    <form action="../util/logoff.php" method="POST">                            
-                <input class="btn btn-xs btn-primary bt-sair" type="submit" value="Sair">
-    </form>
+    
                             
 </nav>

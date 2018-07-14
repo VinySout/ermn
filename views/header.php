@@ -108,7 +108,8 @@
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="http://www.comprasgovernamentais.gov.br/" target="_blank">Compras Net</a></li>
-                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>                                                     
+                          <li><a href="https://www.marinha.mil.br/content/navega-reserva" target="_blank">Navega Reserva</a></li>
+                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>                          
                           <li><a href="http://www.densm.mb" target="_blank">Diretoria de Ensino da Marinha</a></li>                          
                           <li><a href="http://www.gcm.mb" target="_blank">Gabinete do Comandante da Marinha</a></li> 
                           <li><a href="http://www.ccsm.mb" target="_blank">Centro de Comunicação Social da Marinha</a></li>
