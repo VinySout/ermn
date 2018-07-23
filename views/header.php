@@ -107,12 +107,20 @@
                         <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
+                          <li><a href="https://www.marinha.mil.br/todas-as-revistas-nomar" target="_blank">NOMAR</a></li>
+                          <li><a href="http://www.gcm.mb/uso_geral/cerimonial.php" target="_blank">Cerimonial</a></li>
                           <li><a href="http://www.comprasgovernamentais.gov.br/" target="_blank">Compras Net</a></li>
                           <li><a href="https://www.marinha.mil.br/content/navega-reserva" target="_blank">Navega Reserva</a></li>
-                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>                          
+                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>
+                          <li><a href="https://www.marinha.mil.br/content/tradicoes-navais" target="_blank">Tradições Navais</a></li>
+                          <li><a href="https://www.marinha.mil.br/marinha-em-revista" target="_blank">Marinha em Revista</a></li>
+                          <li><a href="https://www.marinha.mil.br/ancora-social" target="_blank">Revista Âncora Social</a></li>
+                          <li><a href="https://www.marinha.mil.br/sspm/?q=concurso/formas-ingresso" target="_blank">Formas de Ingresso na Marinha</a></li>                           
                           <li><a href="http://www.densm.mb" target="_blank">Diretoria de Ensino da Marinha</a></li>                          
-                          <li><a href="http://www.gcm.mb" target="_blank">Gabinete do Comandante da Marinha</a></li> 
+                          <li><a href="http://www.gcm.mb" target="_blank">Gabinete do Comandante da Marinha</a></li>
+                          <li><a href="https://www.marinha.mil.br/content/servico-de-informacao-ao-cidadao-sic" target="_blank">Serviço de Informação ao Cidadão - SIC</a></li>
                           <li><a href="http://www.ccsm.mb" target="_blank">Centro de Comunicação Social da Marinha</a></li>
+                          <li><a href="https://www.marinha.mil.br/amazul/" target="_blank">AMAZUL - Amazônia Azul Tecnologias de Defesa</a></li>                                                     
                         </ul>
                     </div>
                 </nav> 

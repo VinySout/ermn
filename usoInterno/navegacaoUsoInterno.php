@@ -27,7 +27,7 @@
                 <ul class="submenu">
                     <li class="main-titulo-link"><a href="../views/oGuarapes.php#informativoRef">Informativos</a></li>
                     <li class="main-titulo-link"><a href="../views/comSoc.php#destaqueRef">Destaques do semestre</a></li>
-                    <li class="main-titulo-link"><a href="../views/comSoc.php#contatoRef">Fale Conosco</a></li>
+                    <li class="main-titulo-link"><a href="" onclick="alert('Fale conosco pelo e-mail: marques.barreto@marinha.mil.br')">Fale Conosco</a></li>
                 </ul>
             </li>
             <li>
@@ -52,7 +52,7 @@
                     <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
                         echo '<li class="main-titulo-link"><a href="../usoInterno/progNetuno.php#progNetunoRef">Alterar';
                         } echo '</a></li>'; ?>
-                    <li class="main-titulo-link"><a href="../img/pdfs/Planejamento Estrategico Organizacional-da ERMN 2012-2016.odt.ass">Planejamento Estratégico Organizacional</a></li>
+                    <li class="main-titulo-link"><a href="../img/pdfs/PEO.pdf" target="_blank">Planejamento Estratégico Organizacional</a></li>
                     <li class="main-titulo-link"><a href="../img/pdfs/Carta-de-Servico-ERMN-2016.pdf" target="_blank">Carta de Serviços</a></li>
                     <li class="main-titulo-link"><a href="../img/zips/Gestao-de-Riscos.zip">Gestão de Riscos</a></li>
                     <li class="main-titulo-link"><a href="../img/indDesemp/<?= $ultimoIndDesemp->getNome()?>" target="_blank">Indicadores de Desempenhos</a></li>

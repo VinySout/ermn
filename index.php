@@ -157,12 +157,21 @@ session_start();
                         <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
+                          <li><a href="https://www.marinha.mil.br/todas-as-revistas-nomar" target="_blank">NOMAR</a></li>
+                          <li><a href="http://www.gcm.mb/uso_geral/cerimonial.php" target="_blank">Cerimonial</a></li>
                           <li><a href="http://www.comprasgovernamentais.gov.br/" target="_blank">Compras Net</a></li>
                           <li><a href="https://www.marinha.mil.br/content/navega-reserva" target="_blank">Navega Reserva</a></li>
-                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>                          
+                          <li><a href="http://netuno.dadm.mb/" target="_blank">Programa Netuno</a></li>
+                          <li><a href="https://www.marinha.mil.br/content/tradicoes-navais" target="_blank">Tradições Navais</a></li>
+                          <li><a href="https://www.marinha.mil.br/marinha-em-revista" target="_blank">Marinha em Revista</a></li>
+                          <li><a href="https://www.marinha.mil.br/ancora-social" target="_blank">Revista Âncora Social</a></li>
+                          <li><a href="https://www.marinha.mil.br/sspm/?q=concurso/formas-ingresso" target="_blank">Formas de Ingresso na Marinha</a></li>                           
                           <li><a href="http://www.densm.mb" target="_blank">Diretoria de Ensino da Marinha</a></li>                          
-                          <li><a href="http://www.gcm.mb" target="_blank">Gabinete do Comandante da Marinha</a></li> 
+                          <li><a href="http://www.gcm.mb" target="_blank">Gabinete do Comandante da Marinha</a></li>
+                          <li><a href="https://www.marinha.mil.br/content/servico-de-informacao-ao-cidadao-sic" target="_blank">Serviço de Informação ao Cidadão - SIC</a></li>
                           <li><a href="http://www.ccsm.mb" target="_blank">Centro de Comunicação Social da Marinha</a></li>
+                          <li><a href="https://www.marinha.mil.br/amazul/" target="_blank">AMAZUL - Amazônia Azul Tecnologias de Defesa</a></li>
+                          
                                                      
                         </ul>
                     </div>
@@ -203,7 +212,7 @@ session_start();
                                         <ul class="submenu">
                                             <li class="main-titulo-link"><a href="views/oGuarapes.php#informativoRef">Informativos</a></li>
                                             <li class="main-titulo-link"><a href="views/comSoc.php#destaqueRef">Destaques do semestre</a></li>
-                                            <li class="main-titulo-link"><a href="views/comSoc.php#contatoRef">Fale Conosco</a></li>  
+                                            <li class="main-titulo-link"><a href="" onclick="alert('Fale conosco pelo e-mail: marques.barreto@marinha.mil.br')">Fale Conosco</a></li>                                            
                                         </ul>
                                     </li>
                                     <li>
@@ -228,7 +237,7 @@ session_start();
                                             <?php if(isset($_SESSION['usuarioNome']) && $_SESSION['usuarioNome'] != ""){
                                                 echo '<li class="main-titulo-link"><a href="usoInterno/progNetuno.php#progNetunoRef">Alterar';
                                                 } echo '</a></li>'; ?>
-                                            <li class="main-titulo-link"><a href="./img/pdfs/Planejamento Estrategico Organizacional-da ERMN 2012-2016.odt.ass">Planejamento Estratégico Organizacional</a></li>
+                                            <li class="main-titulo-link"><a href="./img/pdfs/PEO.pdf" target="_blank">Planejamento Estratégico Organizacional</a></li>
                                             <li class="main-titulo-link"><a href="./img/pdfs/Carta-de-Servico-ERMN-2016.pdf" target="_blank">Carta de Serviços</a></li>
                                             <li class="main-titulo-link"><a href="./img/zips/Gestao-de-Riscos.zip">Gestão de Riscos</a></li>
                                             <li class="main-titulo-link"><a href="./img/indDesemp/<?= $ultimoIndDesemp->getNome()?>" target="_blank">Indicadores de Desempenhos</a></li>
