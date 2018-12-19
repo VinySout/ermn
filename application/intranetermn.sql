@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 19/04/2018 às 14:36
+-- Tempo de geração: 19/12/2018 às 10:26
 -- Versão do servidor: 10.1.26-MariaDB
 -- Versão do PHP: 7.1.8
 
@@ -46,7 +46,9 @@ INSERT INTO `cardapio` (`id`, `nome`) VALUES
 (8, 'cp-1510667586.pdf'),
 (9, 'cp-1515063335.pdf'),
 (10, 'cp-1519040225.pdf'),
-(11, 'cp-1523972704.pdf');
+(11, 'cp-1523972704.pdf'),
+(12, 'cp-1534768419.pdf'),
+(13, 'cp-1539699544.pdf');
 
 -- --------------------------------------------------------
 
@@ -74,8 +76,15 @@ CREATE TABLE `chamadosti` (
 
 INSERT INTO `chamadosti` (`id`, `nome`, `usuario`, `descricao`, `sdata`, `infpc`, `infpc2`, `providenciado`, `solucao`, `substituicao`, `itemdesc`) VALUES
 (5, '3Â°SG-CN WAGNER', 'PROFESP', 'TransferÃªncia de Antena Virtude mudanÃ§a do laboratÃ³rio de informÃ¡tica do prÃ©dio do PT para o  PrÃ©dio do PROFESP, Solicito mudanÃ§a da antena de Internet da EMBRATEL e verificar a necessidade de materiais para instalaÃ§Ã£o da mesma.', '06-03-2018', '172.23.40.101', '172.23.40.101', 'ConcluÃ­do', 'Infelizmente nÃ£o hÃ¡ possibilidade de executar essa faina por bordo, jÃ¡ que o equipamento Ã© da empresa Embratel. Aconcelho que entre em contato com a mesma, para que prestem o devÃ­do suporte solicitado.', 'N/C', 'N/C'),
-(6, 'teste', 'teste', 'teste', '04-04-2018', '172.23.40.5', '172.23.40.5', 'aguardando', 'aguardando', 'aguardando', 'aguardando'),
-(7, '3SG-ES MAX LUIZ', 'ERMN-111', 'A CPU apresenta problemas de inicializaÃ§Ã£o e &quot;apaga&quot; constantemente.', '16-04-2018', '172.23.40.111', '172.23.40.111', 'aguardando', 'aguardando', 'aguardando', 'aguardando');
+(7, '3SG-ES MAX LUIZ', 'ERMN-111', 'A CPU apresenta problemas de inicializaÃ§Ã£o e &quot;apaga&quot; constantemente.', '16-04-2018', '172.23.40.111', '172.23.40.111', 'ConcluÃ­do', 'EstaÃ§Ã£o de trabalho recolhida para avaliaÃ§Ã£o tÃ©cnica. Problema no desempenho do processador, substituiÃ§Ã£o de processador e placa mÃ£e.', 'Sim', 'Processador Pentium Dual-core, e placa mÃ£e DDR2.'),
+(10, 'SO-AV-RV FARIAS', 'ERMN-312', 'Estou sem acesso ao Sigdem. Consigo entrar no Lotus mas nÃ£o no sigdem.', '13-06-2018', '172.23.40.106', '172.23.40.106', 'ConcluÃ­do', 'InclusÃ£o na configuraÃ§Ã£o de proxy, a exceÃ§Ã£o, &quot;*.mb&quot;.', 'N/C', 'N/C'),
+(11, 'CB-EF ELINE', 'ermn-114', 'Solicito ajuda para mover o monitor do computador, pois estÃ¡ no sol e o cabo Ã© curto.', '13-06-2018', '172.23.40.108', '172.23.40.108', 'ConcluÃ­do', 'ApÃ³s desenroscar o cabo de alimentaÃ§Ã£o do monitor, ficou mais facil move-lo sem substituiÃ§Ã£o por um maior.', 'N/C', 'N/C'),
+(12, '2SG-CN WAGNER', 'ERMN-PROFESP', 'No-break nÃ£o estÃ¡ segurando a carga da impressora. ', '13-06-2018', '172.23.40.36', '172.23.40.36', 'ConcluÃ­do', 'SubstituiÃ§Ã£o do no-break, por um ja existente no setor, que suporta a impressora e a ET.', 'N/C', 'N/C'),
+(13, '3Â°SG-ES MAX', 'ermn-111', 'Solicito instalaÃ§Ã£o da impressora da Secom.', '13-06-2018', '172.23.40.100', '172.23.40.100', 'ConcluÃ­do', 'InstalaÃ§Ã£o realizada', 'N/C', 'N/C'),
+(14, '2Â°SG-AV GUEDES', 'ermn-13', 'Computador nÃ£o estÃ¡ ligando.', '18-06-2018', '172.23.40.212', '172.23.40.212', 'ConcluÃ­do', 'Fonte estava com plugs mal colocados.', 'N/C', 'N/C'),
+(15, 'SO-CN Andre Luiz', 'ERMN-1171', 'NÃ£o consigo acessar a rede Departamentos.', '19-06-2018', '172.23.40.6', '172.23.40.6', 'ConcluÃ­do', 'ExclusÃ£o e inclusÃ£o do mapeamento da pasta Departamentos do servidor de arquivos.', 'N/C', 'N/C'),
+(16, 'SO-CN OZAIR', 'ermn-131', 'Sem acesso ao T.', '25-06-2018', '172.23.40.6', '172.23.40.6', 'ConcluÃ­do', 'Realizado o mapeamento do servidor de Arquivos.', 'N/C', 'N/C'),
+(17, '2Â°SG-CN MARREIRA', 'ERMN-112', 'SOL instalaÃ§Ã£o da impressora Epson L380.', '05-07-2018', '172.23.40.6', '172.23.40.6', 'ConcluÃ­do', 'Ubuntu 16.04. Terminal aberto; comando com root &quot;apt-get -f install&quot;. ApÃ³s isso, instalar os drivers localizado na rede, pasta &quot;Departamentos/Sti/Util/Drivers Impressora L380&quot;, comando; &quot;dpkg -i nome-do-arquivo&quot;', 'N/C', 'N/C');
 
 -- --------------------------------------------------------
 
@@ -132,10 +141,10 @@ CREATE TABLE `destaquesemestre` (
 --
 
 INSERT INTO `destaquesemestre` (`id`, `img`, `posto`, `nome`, `semestre`) VALUES
-(4, '1509545324.jpeg', 'Marinheiro PadrÃ£o', 'MN-RM2 TomÃ©', '1Âº Semestre de 2017'),
-(5, '1509545296.jpeg', 'Militar PadrÃ£o', '1ÂºSG-ES Freitas', '1Âº Semestre de 2017'),
-(7, '1509545254.jpeg', 'Operador padrÃ£o PR', 'CB-CN Yuri', '1Âº Semestre de 2017'),
-(8, '1509545234.jpeg', 'Operador padrÃ£o PMO', '2ÂºSG-CN Bruno', '1Âº Semestre de 2017');
+(4, '1531934674.jpg', 'Marinheiro PadrÃ£o', 'MN-RM2 Ivaniel', '1Âº Semestre de 2018'),
+(5, '1531934693.jpg', 'Militar PadrÃ£o', 'CB (RM2-TE) Souto', '1Âº Semestre de 2018'),
+(7, '1531935073.jpg', 'Operador padrÃ£o PR', '2ÂºSG-CN Judson', '1Âº Semestre de 2018'),
+(9, '1532370520.jpg', 'Operador padrÃ£o PMO', '2ÂºSG-CN DelmÃ¡cio', '1Âº Semestre de 2018');
 
 -- --------------------------------------------------------
 
@@ -153,7 +162,8 @@ CREATE TABLE `inddesemp` (
 --
 
 INSERT INTO `inddesemp` (`id`, `nome`) VALUES
-(1, 'indDesemp-1506016806.pdf');
+(1, 'indDesemp-1506016806.pdf'),
+(2, 'indDesemp-1532009419.pdf');
 
 -- --------------------------------------------------------
 
@@ -192,7 +202,21 @@ INSERT INTO `ndnr` (`id`, `nome`) VALUES
 (19, 'ndnr-1511992776.zip'),
 (20, 'ndnr-1512039613.zip'),
 (21, 'ndnr-1512045087.zip'),
-(22, 'ndnr-1512151584.zip');
+(22, 'ndnr-1512151584.zip'),
+(23, 'ndnr-1524595736.zip'),
+(24, 'ndnr-1524744643'),
+(25, 'ndnr-1524744668'),
+(26, 'ndnr-1524744733.zip'),
+(27, 'ndnr-1524756673.zip'),
+(28, 'ndnr-1524770678.zip'),
+(29, 'ndnr-1534202408.zip'),
+(30, 'ndnr-1534242074.zip'),
+(31, 'ndnr-1534291262.zip'),
+(32, 'ndnr-1534325483.zip'),
+(33, 'ndnr-1534717683.zip'),
+(34, 'ndnr-1541504275.zip'),
+(35, 'ndnr-1541678220.zip'),
+(36, 'ndnr-1541741589.zip');
 
 -- --------------------------------------------------------
 
@@ -221,7 +245,8 @@ INSERT INTO `oguarapes` (`id`, `imagem`, `pdf`, `edicao`) VALUES
 (26, '1501078544.jpg', '1501078544.pdf', '7Âª EdiÃ§Ã£o Guarapes'),
 (27, '1501078494.jpg', '1501078494.pdf', '8Âª EdiÃ§Ã£o Guarapes'),
 (28, '1510167085.jpg', '1510167085.pdf', '9Âª EdiÃ§Ã£o Guarapes'),
-(29, '1518697639.jpg', '1518697639.pdf', '10Âª EdiÃ§Ã£o Guarapes');
+(29, '1518697639.jpg', '1518697639.pdf', '10Âª EdiÃ§Ã£o Guarapes'),
+(30, '1535653738.png', '1535653738.pdf', '11Âª EdiÃ§Ã£o Guarapes');
 
 -- --------------------------------------------------------
 
@@ -247,7 +272,10 @@ INSERT INTO `planodia` (`id`, `nome`) VALUES
 (24, 'pd-1510057800.pdf'),
 (25, 'pd-1510667835.pdf'),
 (26, 'pd-1515063147.odt'),
-(27, 'pd-1519039829.pdf');
+(27, 'pd-1519039829.pdf'),
+(28, 'pd-1525006573.pdf'),
+(29, 'pd-1534768084.pdf'),
+(30, 'pd-1539699535.pdf');
 
 -- --------------------------------------------------------
 
@@ -335,12 +363,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `cardapio`
 --
 ALTER TABLE `cardapio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de tabela `chamadosti`
 --
 ALTER TABLE `chamadosti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de tabela `comandantes`
 --
@@ -350,27 +378,27 @@ ALTER TABLE `comandantes`
 -- AUTO_INCREMENT de tabela `destaquesemestre`
 --
 ALTER TABLE `destaquesemestre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de tabela `inddesemp`
 --
 ALTER TABLE `inddesemp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de tabela `ndnr`
 --
 ALTER TABLE `ndnr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT de tabela `oguarapes`
 --
 ALTER TABLE `oguarapes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de tabela `planodia`
 --
 ALTER TABLE `planodia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
