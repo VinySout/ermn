@@ -212,6 +212,7 @@ session_start();
                                         <ul class="submenu">
                                             <li class="main-titulo-link"><a href="views/oGuarapes.php#informativoRef">Informativos</a></li>
                                             <li class="main-titulo-link"><a href="views/comSoc.php#destaqueRef">Destaques do semestre</a></li>
+                                            <li class="main-titulo-link"><a href="./img/pdfs/#" target="_blank">Carta de Serviços PROFESP</a></li>
                                             <li class="main-titulo-link"><a href="" onclick="alert('Fale conosco pelo e-mail: marques.barreto@marinha.mil.br')">Fale Conosco</a></li>                                            
                                         </ul>
                                     </li>
@@ -238,7 +239,7 @@ session_start();
                                                 echo '<li class="main-titulo-link"><a href="usoInterno/progNetuno.php#progNetunoRef">Alterar';
                                                 } echo '</a></li>'; ?>
                                             <li class="main-titulo-link"><a href="./img/pdfs/PEO.pdf" target="_blank">Planejamento Estratégico Organizacional</a></li>
-                                            <li class="main-titulo-link"><a href="./img/pdfs/Carta-de-Servico-ERMN-2016.pdf" target="_blank">Carta de Serviços</a></li>
+                                            <li class="main-titulo-link"><a href="./img/pdfs/Carta-de-Servico-ERMN-2018.pdf" target="_blank">Carta de Serviços ERMN</a></li>
                                             <li class="main-titulo-link"><a href="./img/zips/Gestao-de-Riscos.zip">Gestão de Riscos</a></li>
                                             <li class="main-titulo-link"><a href="./img/indDesemp/<?= $ultimoIndDesemp->getNome()?>" target="_blank">Indicadores de Desempenhos</a></li>
                                             <li class="main-titulo-link"><a href="./img/pdfs/OF36-Anx-PlanoDaMelhoriaDaGestao-2016_2017.odt.ass">Planos de Melhoria da Gestão</a></li>
@@ -287,7 +288,7 @@ session_start();
                                             <li class="main-titulo-link"><a href="http://mensageiro.ctim.mb/sparkweb/index.html" target="_blank" >Spark Web</a></li>
                                             <li class="main-titulo-link"><a href="https://www.aplicacoes.dpmm.mb/seguranca/login.asp" target="_blank">BDPES</a></li>
                                             <li class="main-titulo-link"><a href="http://www.quaestor.mb/" target="_blank">Quaestor</a></li>
-                                            <li class="main-titulo-link"><a href="http://www.sismat.dfm.mb/" target="_blank">Sismat</a></li>                                        
+                                            <li class="main-titulo-link"><a href="http://www.sismat.dfm.mb:8080/sismat/" target="_blank">Sismat</a></li>                                        
                                             <li class="main-titulo-link"><a href="http://www.singra.dabm.mb:7778/prod/dyn_index.show" target="_blank">Singra Web</a></li>
                                             <li class="main-titulo-link"><a href="http://www.dgom.mb/siplad/siplad.htm" target="_blank">SIPLAD</a></li>
                                             <li class="main-titulo-link"><a href="https://www.compartilhamentodearquivos.mar.mil.br/login.php" target="_blank">Compartilhamento de arquivos MB</a></li>
@@ -337,8 +338,8 @@ session_start();
                                 </ul>
                             </div>
                             <div>
-                                <a href="https://www.marinha.mil.br/content/amazonia-azul-1" target="_blank">
-                                    <img alt="Amazônia Azul" src="img/Amazonia-Azul.png" class="img-amazonia-azul">
+                                <a href="https://www.marinha.mil.br/amazonia-azul" target="_blank">
+                                    <img alt="Dia Nacional da Amazônia Azul" src="img/Amazonia-Azul.jpg" class="img-amazonia-azul">
                                 </a>
                             </div>
                         </nav>
@@ -347,13 +348,13 @@ session_start();
                         <ul class="diaporama1">
                             <!-- <li><img src="img/galerie/u1.1.jpg" alt="Baluarte IX" title="Baluarte IX" width="600px" height="320px"/></li> -->
                             <li><img src="img/galerie/u1.jpg" alt="Entrada da ERMN" title="Entrada da ERMN" width="600px" height="320px"/></li>
-                            <li><img src="img/galerie/u2.jpg" alt="Frente do prédio do comando" title="Frente do prédio do comando" width="600px" height="320px"/></li>
+                            <li><img src="img/galerie/u2.jpg" alt="Frente ao prédio do comando" title="Frente do prédio do comando" width="600px" height="320px"/></li>
                             <li><img src="img/galerie/u3.jpg" alt="Lema da ERMN" title="Lema da ERMN" width="600px" height="320px"/></li>
-                            <li><img src="img/galerie/u4.jpg" alt="Tipulação Atual" title="Tipulação Atual" width="600px" height="320px"/></li>
+                            <li><img src="img/galerie/u4.jpg" alt="Tripulação Atual" title="Tipulação Atual" width="600px" height="320px"/></li>
                             <li><img src="img/galerie/u5.jpg" alt="Nosso Profesp" title="Nosso Profesp" width="600px" height="320px"/></li>
-                            <li><img src="img/galerie/u6.jpg" alt="Visão Aérea da ADM" title="Visão Aérea da ADM" width="600px" height="320px"/></li>
-                            <!--<li><img src="img/galerie/u7.jpg" alt="Alinhando o JS" title="Alinhando o JS"/></li>-->
-                        </ul>
+                            <li><img src="img/galerie/u6.jpg" alt="Vista Aérea da ADM" title="Visão Aérea da ADM" width="600px" height="320px"/></li>
+                            <!--li><img src="img/galerie/u7.jpg" alt="Dia Nacional da Amazônia Azul" title="Dia Nacional da Amazônia Azul"/><a href="https://www.marinha.mil.br/amazonia-azul" target="_blank">Dia Nacional da Amazônia Azul</a></li> --> 
+                        </ul>                                                                                                               
                         <ul class="lineIndex">
                             <li>
                                 <hr/>
